@@ -1,0 +1,50 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{latexsym}
+\usepackage{amsmath,amsthm}
+\usepackage{xy}
+\input xy
+\xyoption{all}
+\begin{document}
+\newcommand{\mbf}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\N}{\mbf{N}}
+\renewcommand{\O}{\mbf{O}}
+
+\noindent Bill Davis \\
+Homework 6 \\
+April 6 2011
+
+\begin{enumerate}
+
+\item
+A 2-change does not neccessarily define an exact neighborhood for TSP. For example in the problem below the solution noted is a minimum within a two change, but not within four changes. 
+
+\item
+What makes binary integer programming more difficult then linear programming, despite the reduction in the possible values of the variables, is the lack of a nice linear transition function between various points in the feasible region. In particular a way to restrict a variable to take on either a 0 or 1 is to add the constraint that $ x(x-1) = 0$. This will of course only be satisifed when x is 0 or 1, however is nonlinear. 
+
+\item 
+Degeneracy is a problem when solving a linear programming problem because it breaks the assumption that at any given vertex in the polytop defined by the problem, you can select a better vertex and move in some direction. When a degenerate vertex is present, at a given vertex there is a move that will leave the algorithm at the same vertex that it's trying to leave. This can lead to cyclical moves, and prevent the simplex algorithm from finding a solution to the problem. 
+
+\begin{quote}
+In principle, cycling can occur if there is degeneracy.  In practice,  cycling does not arise, 
+but no one really knows why not.  Perhaps it  
+does occur, but people assume that the simplex algorithm is just
+taking too long for some other reason, and they never discover the 
+cycling.
+\end{quote}
+
+http://ocw.mit.edu/courses/sloan-school-of-management/
+15-053-optimization-methods-in-management-science-spring-2007/tutorials/tut5.pdf
+
+\item
+No, even if every vertex in an LP is nondegenerate this does not imply that there exists a unique solution. For example consider the LP defined by $x_1<5$, $x_2<5$ with the cost function $max(x_1,x_2)$. In this example there are multiple optimal solutions along the lines $x=5$ and $x_2=5$. 
+
+\item
+We'll need some definitions to show this. First a set is convex iff each distinct pair of points in the set the closed segment between those two points is also in the set. And two a convex polytope is the convex hull of a finite set of points, where the finite set contains the set of extreme points of the polytope. An extreme point is a point not lying on any open line segment contained in the set. A face is the intersection of $P$ and any supporting hyperplane, where a hyperplane is supporting if $P$ is entirely contained within one of the two closed spaces defined by the hyperplane. 
+
+So assume we have a k-dimensional face $F$ of a polytope $P$. Then $F$ is the intersection of a k-dimensional hyperplane and $P$. 
+
+Assume for sake of contradiction that $F$ is not convext, then there exists two points in the face that are unable to be connected via a line. However these two points must be able to be connected in $P$ since $P$ is convex. This implies that at least one interior point of the line segment containing the two points is not present in the intersection of the hyperplane and $P$. However this contradictions the definition of a hyperplane, since any two points in a hyperplane are able to be connected by a line. 
+
+
+
+\end{document}

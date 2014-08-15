@@ -1,0 +1,52 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{latexsym}
+\usepackage{amsmath,amsthm}
+\usepackage{xy}
+\input xy
+\xyoption{all}
+\usepackage{url}
+\begin{document}
+\newcommand{\mbf}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\N}{\mbf{N}}
+\renewcommand{\O}{\mbf{O}}
+
+\noindent Bill Davis \\
+Homework 7 \\
+April 13 2011
+
+There is two side to a MapReduce implementation. First are generic
+MapReduce algorithms that run on the system. These can be used to do anything
+from compute eigenvectors of sparse matrices to calculting a matrix product to
+computing a minimum spanning tree. However, in order for an algorithm to run
+efficiently on a parallel machine, there has to be an efficient parallel
+algorithm. The class NC captures the concept of efficient parallel algorithms.
+Since NC is a subset of P, we can wonder if there are problems that are in P but
+not in NC. Of course there is no proof, but the general intuition is that the
+class P-Complete captures algorithms which are in P but not in NC. And linear
+programming, optimization falls into the class P-Complete. This implies that
+there is no easily parallelizable algorithm which can run on a cluster and solve
+a linear/nonlinear optimization problem. 
+
+There is second side the MapReduce equation and that is the
+efficient running of a given MapReduce algorthim. This can easily be formulated
+as an optimization problem, that is given an input set and a MapReduce program
+what are the steps to execute the program while minimizing the load on the
+system. In particular its neccessary to map every input file/tuple to a
+particular machine in order to be Mapped, and then to allocate reducers
+across the cluster to process the resulting tuples. The constraints here are
+network/cpu capacity. This is similar to a max-flow problem. In essense you're
+trying to maximize the throughput of input tuples across the system. 
+
+\begin{thebibliography}{9}
+
+\bibitem{fisher1}
+  Michael J. Fischer, Xueyuan Su, and Yitong Yin
+  \emph{Assigning Tasks For Efficiency In Hadoop}.
+  \url{http://cs.yale.edu/homes/xs45/pdf/fsy-spaa2010-slides.pdf}
+\bibitem{wikipedia1}
+	Wikipedia, the free encyclopedia
+	\emph{P-complete} 
+	\url{http://en.wikipedia.org/wiki/P-complete}
+
+\end{thebibliography}
+\end{document}

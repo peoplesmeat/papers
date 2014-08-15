@@ -1,0 +1,47 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{latexsym,epsf,epsfig}
+\usepackage{amsmath,amsthm}
+\usepackage{xy}
+\input xy
+\xyoption{all}
+\begin{document}
+\newcommand{\mbf}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\N}{\mbf{N}}
+\renewcommand{\O}{\mbf{O}}
+
+\noindent Bill Davis \\
+Homework 2 \\
+February 23 2011 
+
+\begin{enumerate}
+\item Left Shifting Turing Machine. 
+
+The problem here is to show that a regular TM and a left shifting TM are equivilent, in that they both recongnize the same language. I think it is clear that a regular TM can simulate any left resetting TM. Just iterate move left until the start of tape symbol can be found. More difficult is to simulate a regular TM with a left reset TM. 
+
+The basic plan to do this is to replace the "move left" command with a series of commands that involve "move right", "read", "write", and "shift left". Since a left reset TM can do all the things a regular TM can do except "move left" if our simulated "move left" accomplishes an identical result this should be sufficient. 
+
+We can accomplish this with the same trick as in merging tapes, that is to expand the grammer included the original alphabet and a symmetical marked alphabet. Assume we have a normal TM $M$, and a left-reset TM $M_L$ with a grammer that includes two symbols for every one in $M$, this can be used to mark a cell. So, assume $M$ wants to accomplish a "move left".  $M_L$ will also need an additional register to help manage the simulated "move left".
+
+For $M_L$ to do this, first it reads and replaces the cell the head is currently on with a marked item from the grammer. Then it issues the "left reset" command. Then we'll shift the whole read/write tape to the right one cell. Do this by reading a cell, checking if it is a marked version of the alphabet. If not store in a register $last$ and write the previous value of $last$ to the tape. If it is a marked version, the write out a marked version of $last$ and store an unmarked version in the same register. Now the single marked cell is the one directly to the left of the one we started with. We now have to complete to the right shift of the read/write tape. Once the read/write head of $M_L$ is at the end of the tape issue another "left reset" command and commence scanning for the marked cell. Once found write out an unmarked version of the symbol in that cell and we have fully simulated the "left shift" command and can commence with $M$. 
+
+\item 1.8
+Here is the definition of a Turing Machine which comput`es LOOKUP. It runs on 5 tapes. Two input tapes, two read/write tapes and an output tape. We know by Claim 1.6 that we can simulate this TM in $25T^2(n)$ time.
+
+First copy the $i$ to the first tape and $x$ to the second tape. At each step we 1. Check $i$, if it is zero copy the digit under the head on the second tape to the output tape and halt. Otherwise decrement $i$ and move the head on the second tape one digit to the right. Read the digit under the second tape, if we've gone past the end of the tape, return copy 0 to the output tape and halt. 
+
+\item 1.12 
+Let $S$ be some set of partial functions. Our function under consideration is $f_S$ where $f_S(\alpha)=1$ when $M_\alpha$ computes some partial function $f \in S$. Suppose, for the sake of contradiction we have a TM named $M_{halt}$ which solves the halting problem. The general plan is to construct a TM $M_{f_S}$ which when combined with $M_{halt}$ solves the $f_S$, which contradicts Rice's theorem. 
+
+Define a new TM $TM_S$ which takes as input $\alpha$, simulates $TM_\alpha$ for each $x$ that each $f \in S$ is valid.  If the TM $TM_\alpha$ computes one of the partial functions of f then $TM_S$ halts and returns 1. Clearly if we run $TM_S$ through $TM_{halt}$ then we can compute $f_S$. Which violates Rice's theorem. The issue then is how can we encode $TM_S$ and verify that $TM_S$ is a valid TM. 
+
+\items 1.14 
+\begin{enumerate}
+\item CONNECTED. A general algorithm for this is to 1. select a node. 2. perform a BFS or a DFS adding seen nodes to a list. 3. If the list contains all the nodes then G is connected, otherwise there are disconnected nodes. The complexity of this is O(V+E). Since we can store this as adjacency matrix, we would have to visit at most $V^2$ cells, and this is in P. 
+
+\item BIPARTITE
+
+
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

@@ -1,0 +1,150 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{latexsym,epsf,epsfig}
+\usepackage{amsmath,amsthm}
+\usepackage{xy}
+\input xy
+\xyoption{all}
+\begin{document}
+\newcommand{\mbf}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\N}{\mbf{N}}
+\renewcommand{\O}{\mbf{O}}
+
+\noindent Bill Davis \\
+Homework 1 \\
+October 7 2008
+
+
+\begin{enumerate}
+\item %Problem 1
+\[ A= \left( \begin{array}{cc}
+\frac{1+i}{\sqrt{3}} & \frac{1+i}{\sqrt{6}}  \\
+\frac{i}{\sqrt{3}} & \frac{-2i}{\sqrt{6}}  \end{array} \right)\] 
+A is unitary if $AA^{\dag}=I$
+\[  
+\left( \begin{array}{cc}
+\frac{1+i}{\sqrt{3}} & \frac{1+i}{\sqrt{6}}  \\
+\frac{i}{\sqrt{3}} & \frac{-2i}{\sqrt{6}}  \end{array} \right)
+\left( \begin{array}{cc}
+\frac{1-i}{\sqrt{3}} & \frac{-i}{\sqrt{3}}  \\
+ \frac{1-i}{\sqrt{6}} & \frac{2i}{\sqrt{6}}  \end{array} \right)
+ = 
+\left( \begin{array}{cc}
+1 & 0 \\
+0 & 1 \end{array} \right)
+\]
+Therefore A is unitary.
+\item %Problem 2
+By the definition of a unitary operator
+\[
+(U \alpha, U \alpha) = (\alpha, \alpha) 
+\] 
+Since $\alpha$ is an eigenvector with value $c$. 
+\[
+(U \alpha, U \alpha) = (c \alpha, c \alpha)
+\]
+Therefore,
+\[
+(\alpha, \alpha)= (c \alpha, c \alpha) = c(c\alpha, \alpha)
+ = c(\alpha, c\alpha)^{*} = cc^{*}(\alpha, \alpha)
+\]
+\[
+(\alpha, \alpha) = cc^{*}(\alpha, \alpha)
+\]
+Then $1= cc^{*}$ and it follows that $|c|=1$.
+
+\item %Problem 3
+\begin{enumerate}
+\item 
+Assuming we have Hermitian operators $A_{1}$ and $A_{2}$ 
+\[
+	(\phi , (c_{1}A_{1}+c_{2}A_{2})\psi) = (\phi, c_{1}A_{1}\psi + c_{2}A_{2}\psi)  
+\]
+by the linearity of A. 
+\begin{eqnarray}
+(\phi, c_{1}A_{1}\psi + c_{2}A_{2}\psi) &=& c_{1}(\phi,A_{1}\psi) + c_{2}(\phi, A_{2}\psi) \\
+&=& c_{1}(A_{1}\phi, \psi)+ c_{2}(A_{2}\phi, \psi) \\
+&=& (c_{1}^{*}A_{1}\phi, \psi)+ (c_{2}^{*}A_{2}\phi, \psi) 
+\end{eqnarray}
+Where (1) is by I1 and (2) is by the definition of a hermitian operator. 
+Because $c_{1}$ and $c_{2}$ are real $c_{1}=c_{1}^{*}$ and $c_{2}=c_{2}^{*}$
+Therefore 
+\[
+(\phi , (c_{1}A_{1}+c_{2}A_{2})\psi) = ((c_{1}A_{1}+c_{2}A_{2})\phi, \psi)
+\]
+And $(c_{1}A_{1}+c_{2}A_{2})$ is hermitian
+
+\item 
+\begin{eqnarray}
+(A_{1}A_{2}\phi, \psi) &=& (A_{1}(A_{2}\phi), \psi))\\
+&=& (A_{2}\phi, A_{1}\psi)\\
+&=& (\phi, A_{2}A_{1}\psi) 
+\end{eqnarray}
+And if $A_{1}A_{2}=A_{2}A_{1}$ then 
+\[
+(A_{1}A_{2}\phi, \psi) = (\phi, A_{1}A_{2}\psi)
+\]
+Therefore $A_{2}A_{1}$ is hermitian. 
+\end{enumerate}
+\item %Problem 4
+Because A is observable, this means that A is hermitian. And by Thm 1.13 the eigenvectors of a Hermitian operator form a orthonormal basis for H. This means that $\psi$ can be expressed as 
+\[
+\psi = \sum_{m=1}^{M}{\psi_m}\left | a_{m} \right \rangle
+\]
+Also since we are certain that the measurement of observable A will equal $a_{k}$, we know that 
+\begin{eqnarray}
+P(a_{k})=1=| \left \langle a_{k} \right. \left | \psi \right \rangle |^{2} \\
+P(a_{n\ne k})= 0 =| \left \langle a_{n\ne k} \right. \left | \psi \right \rangle |^{2}
+\end{eqnarray}
+And since the expansion coefficients of $\psi$ = $(a_{m},\psi)$ This means we can expand $\psi$ as $d_{1}\alpha_{1} + d_{2}\alpha_{2} + ... + d_{n} \alpha_{n}$ and by the above $d_{m} = 0$ for every value $m \ne k$. This means that $\psi = c\alpha_{k}$
+\item %Problem 5
+
+$  \left | \psi \right \rangle \left \langle \xi \right.| =\begin{pmatrix}9 \\ 2\end{pmatrix} (\frac{-i}{\sqrt{2}} , \frac{1}{\sqrt{2}})^{*} = 
+ \left( \begin{array}{cc}
+\frac{9i}{\sqrt{2}} & \frac{9}{\sqrt{2}}  \\
+i\sqrt{2} &\sqrt{2}  \end{array} \right)$
+
+$ \left | \xi \right \rangle \left \langle \psi \right.| =\begin{pmatrix}\frac{-i}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{pmatrix} (9 , 2 )^{*} = 
+ \left( \begin{array}{cc}
+\frac{-9i}{\sqrt{2}} & -i\sqrt{2}  \\
+\frac{9}{\sqrt{2}} & \sqrt{2}  \end{array} \right)$
+\item %Problem 6
+
+\begin{enumerate}
+\item The eigenvalues are $a_{1}=-1, a_{2}=0, a_{3}=1$
+\item The probability of a measurement of A on a system in state $\psi$ at time t will yeild -1 is 
+\[
+| \left \langle a_{1} \right. \left | \psi \right \rangle |^{2} = (\frac{\sqrt{2}}{\sqrt{6}})^{2} = \frac{1}{3}
+\]
+\item
+The probability of measuring $b_2$ given state $\psi$
+\[
+| \left \langle b_{2} \right. \left | \psi \right \rangle |^{2} = (\frac{2}{\sqrt{6}})^{2} 
+\] 
+And the probability of measuring $a_{3}$ given we have just measured $b_{2}$ is 
+\[
+| \left \langle  a_{3}  \right. \left |b_{2} \right  \rangle |^{2} = (\frac{1}{\sqrt{2}})^{2} 
+\] 
+So the probabaility of 0 then 1 = $(\frac{2}{3})(\frac{1}{2})=\frac{1}{3}$
+\item
+The probability of measuring $a_3$ and then $b_2$ is
+\[ 
+(\frac{1}{3})(\frac{1}{2})=\frac{1}{6}
+\]
+\end{enumerate}
+\item %Problem 7
+\begin{eqnarray}
+(A\phi, \psi) &=& (A(d_{1}\alpha_{1}+d_{2}\alpha_{2} + ... + d_{n}\alpha_{n}), \psi) \\
+&=& (a_{1}d_{1}\alpha_{1} + a_{2}d_{2}\alpha_{1} + ... + a_{2}d_{n}\alpha_{n}, \psi) \\
+&=&(a_{1}d_{1}\alpha_{1} + ... + a_{2}d_{n}\alpha_{n} ,  
+c_{1}\alpha_{1} + ... + c_{n}\alpha_{n})
+\end{eqnarray}
+For eigenvectors $\alpha_{n}$ and real eigenvalues $a_{n}$ And since $(\alpha_{n}, \alpha_{m})=0$ if $n\ne m$ and 1 otherwise then
+\[
+(A\phi, \psi) = a_{1}d_{1}c_{1}+ a_{2}d_{2}c_{2} + ... + a_{n}d_{n}c_{n}
+\]
+
+By the same argument as above  $(\phi, A\psi) = 
+d_{1}a_{1}c_{1} + d_{2}a_{2}c_{2} + ... + d_{n}a_{n}c_{n}$
+Since $a_{n}d_{n}c_{n}=d_{n}a_{n}c_{n}$ then A is hermitian. 
+\end{enumerate}
+\end{document}

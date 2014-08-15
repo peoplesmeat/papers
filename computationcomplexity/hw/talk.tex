@@ -1,0 +1,98 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{latexsym}
+\usepackage{amsmath,amsthm}
+\usepackage{xy}
+\input xy
+\xyoption{all}
+\usepackage{url}
+\begin{document}
+
+\newcommand{\mbf}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\N}{\mbf{N}}
+\renewcommand{\O}{\mbf{O}}
+
+\noindent Bill Davis \\
+
+\section{Introduction}
+
+Formally a TM $M$ is described by a tuple $(\Gamma, Q, \delta)$ where
+\begin{itemize}
+  \item A finite set $\Gamma$ of symbols that $M$'s tape contains. We assume this contains some helper symbols like blank, start, stop, 0, 1
+  \item A finite set $Q$ of possible states that M can be in
+  \item A transition function $\delta:Q \times \Gamma^k \rightarrow Q \times  \Gamma^{k-1} \times {L,S,R}^k$
+\end{itemize}
+$\delta$ provides actions for the head to take on the ith step. 
+\\
+\\
+Some neat results, you can have an arbitrary number of tapes with a $5kT^2(n)$ slowdown. You can have infinite tapes in both directions in $4T(n)$. You can expand the gramma to an arbitrary size with a $4 \log{|\Gamma|} T(n)$. No TM can compute HALT. There exists a universal TM. 
+
+Church-Turing Conjecture, every physically realizable computation device - can be simulated by a Turing Machine
+
+
+\section{P versus NP}
+The class P, $\textbf{P} = \cup_{c \ge 1}\textbf{DTIME}(n^c)$. Other physically realizable models, Quantum Computers ...
+
+The class NP, either nondeterministic, or consists of a polynomial time verifier with a polynomial length certificate. Algorithms take $\O(2^n)$.
+\\
+\\
+MapReduce can save us? Quadradic Sieve...
+
+
+\begin{tabular}{c c c}
+\hline 
+digits & mapreduce & single machine \\
+10 & 2 & 0.1 \\
+15 & 3 & 3.5 \\
+20 & 35 & 116 \\ 
+25 & 495 & 3413 \\
+\end{tabular}
+
+\section{Other Computational Models}
+Parallel Machines, RAM, PRAM, BSP
+
+\subsection{RAM}
+ A RAM (RANDOM ACCESS MACHINE) consists of a finite program operating on an infinite sequence of registers, with each register able to hold an arbitary integer. Each program consists of a set of operations, load, add, subtract, store. A RAM can simulate a TM in $T^3$ and a multitape TM can simulate a ram in $T^2$.
+
+\subsection{PRAM}
+Multiple CPUs sharing a single shared memory address space. Think CRAY, SGI, IBM vector processors. Allows us to talk about scaling up our resources, in particular define a new class 
+\\
+NC = languages decidable in $\O (\log n)$ time with $\O(n)$ CPUs
+
+\subsection{BSP} 
+Bounded Sequential Parallelism, relaxes model somewhat to allow for communication between processors that each have their own memory space. Implementable as a C library
+
+Question? 
+Does every problem which has a solution in P also have a solution in NC? Look at Maximal Independent Set. P completeness. P-NC, Can we use these models to describe map reduce?
+
+\section{MapReduce} 
+Given a set $X=\{ x_1,x_2, x_3 ..., x_n \}$
+\begin{itemize}
+\item
+A map step applies a function $\mu$ to each $x_i$ to produce a key-value pair $(k_i, v_i)$ To allow for parallel execution, the computation of the function $\mu(x_i)\rightarrow (k_i,v_i) $ must depend only on $x_i$. 
+
+\item
+A shuffle step collects all the key-value pairs produced in the previous map step into a set of lists $L_k = (k_i;v_1, v_2,...v_n)$ where each list consists of all values for a given key. (Optionally a secondary sort)
+
+\item 
+A reduce step applies a function $\rho$ to each list $L_k$  to produce a new set of values $y_1, y_2$. The reduction function should be independent of other keys. 
+\end{itemize}
+
+Limiting sizes of algorithms, One approach MRC, mapper/reducer uses $\O(n^{1-\epsilon})$ Rounds R = $\O(\log n)$.  MRC - NC is not empty, however it is not neccesarily the case that P is a subset of MRC. Another approach is to define a parameter M and say that the IO buffer size of the reducers must be less then M. 
+
+\begin{itemize}
+\item
+L latency of suffle network
+\item
+B bandwidth of shuffle network
+\item
+$C_r $communications complexity total size of inputs/outputs for all the mappers and reducers in round r
+\item
+$t_r $ running time of round, maximum internal running time taken by a mapper or reducer
+\end{itemize}
+\[
+T = \Omega(\sum_{r=0}^{R-1}(t_r +L + \frac{C_r}{B}) = \Omega(t + RL + \frac{C}{B})
+\]
+word count 
+
+
+\end{document}

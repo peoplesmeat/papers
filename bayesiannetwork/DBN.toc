@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Motivation}{2}
+\contentsline {section}{\numberline {3}Definition}{3}
+\contentsline {subsection}{\numberline {3.1}Markov Models}{3}
+\contentsline {subsection}{\numberline {3.2}Dynamic Bayesian Networks}{4}
+\contentsline {section}{\numberline {4}Inference in Dynamic Networks}{4}
+\contentsline {subsection}{\numberline {4.1}Exact Inference}{4}
+\contentsline {subsection}{\numberline {4.2}Approximate Inference}{6}
+\contentsline {subsection}{\numberline {4.3}Learning}{7}
+\contentsline {section}{\numberline {5}Examples}{8}
+\contentsline {subsection}{\numberline {5.1}BATMobile}{8}
+\contentsline {subsection}{\numberline {5.2}Fall Prediction and Sensor Fusion}{9}
+\contentsline {subsection}{\numberline {5.3}Grammatical Parsing and Applicability to Biological Models}{10}
+\contentsline {section}{\numberline {6}Conclusion}{12}

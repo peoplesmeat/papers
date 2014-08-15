@@ -1,0 +1,265 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{latexsym,epsf,epsfig}
+\usepackage{amsmath,amsthm}
+
+\input {Qcircuit}
+\xyoption{all}
+
+\begin{document}
+\newcommand{\mbf}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\N}{\mbf{N}}
+\renewcommand{\O}{\mbf{O}}
+
+\newcommand{\braket}[2]{\left \langle #1 \right. \left | #2 \right \rangle}
+
+\noindent Bill Davis \\
+Homework 3 \\
+November 4 2008
+
+\begin{enumerate}
+\item %Problem 1
+$\ket{\psi}= \frac{1}{2\sqrt{2}}((1+2i)\ket{\phi_1}+\sqrt{3}\ket{\phi_2})$ \\
+$\ket{\xi}=\frac{1}{\sqrt{2}}(\ket{\phi_1}-i\ket{\phi_2})$
+
+$\ket{\phi}\bra{\xi} = 
+=\frac{1}{2\sqrt{2}}\begin{pmatrix}1+2i \\ \sqrt{3} \end{pmatrix} \frac{1}{\sqrt{2}} (1 , -i )^{*} = 
+ \frac{1}{4}\left( \begin{array}{cc}
+1+2i & -2+i  \\
+\sqrt{3} & \sqrt{3}i  \end{array} \right)$
+
+$\ket{\xi}\bra{\phi} = 
+=\frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ -i \end{pmatrix} \frac{1}{2\sqrt{2}} (1+2i ,2-i )^{*} = 
+ \frac{1}{4}\left( \begin{array}{cc}
+1-2i & \sqrt{3}  \\
+-2-i & -\sqrt{3}i  \end{array} \right)$
+
+\item %Problem 2
+
+$\ket{\psi}=\frac{1}{\sqrt{3}}\ket{0} + \frac{\sqrt{2}}{\sqrt{3}}\ket{1}$
+
+\begin{eqnarray}
+HX\ket{\psi} &=& H\left( \begin{array}{cc}
+						0 & 1  \\
+						1 & 0  \end{array} \right)\ket{\psi} \\
+&=& H\left( \begin{array}{cc}
+						\frac{\sqrt{2}}{\sqrt{3}}   \\
+						\frac{1}{\sqrt{3}}   \end{array} \right)\\
+&=& \frac{1}{\sqrt{2}}\left( \begin{array}{cc}
+						1 & 1   \\
+						1 & -1  \end{array} \right)\left( \begin{array}{cc}
+						\frac{\sqrt{2}}{\sqrt{3}}   \\
+						\frac{1}{\sqrt{3}}   \end{array} \right) \\
+&=& \frac{1}{\sqrt{2}} \left( \begin{array}{cc}
+						\frac{\sqrt{2}}{\sqrt{3}}  +\frac{1}{\sqrt{3}} \\
+						\frac{\sqrt{2}}{\sqrt{3}} -\frac{1}{\sqrt{3}}   \end{array} \right)
+\end{eqnarray}
+
+\item %Problem 3
+$H\ket{0} = \frac{1}{\sqrt{2}}\left( \begin{array}{cc}
+						1 & 1   \\
+						1 & -1  \end{array} \right)\left( \begin{array}{cc}
+						1   \\
+						0   \end{array} \right) =  \frac{1}{\sqrt{2}}\left( \begin{array}{cc}
+						1   \\
+						1   \end{array} \right)$
+
+$XH\ket{0} =X\frac{1}{\sqrt{2}}\left( \begin{array}{cc}
+						1   \\
+						1   \end{array} \right) = \frac{1}{\sqrt{2}}\left( \begin{array}{cc}
+						1   \\
+						1   \end{array} \right)$
+
+
+CNOT($\frac{1}{\sqrt{2}}(\ket{0}+\ket{1}) \otimes \frac{1}{\sqrt{2}}(\ket{0}+\ket{1}))$
+
+\item %Problem 4
+
+
+
+\item %Problem 5
+We can do this with three pieces of information.
+
+
+\[ \Qcircuit @C=1em @R=.7em {
+   & \gate{H} & \gate{H} & \qw 
+} =
+\Qcircuit @C=1em @R=.7em {
+   & \qw & \qw
+} \] 
+\[
+\frac{1}{\sqrt{2}}\left(\begin{array}{cc} 
+1 & 1\\ 
+1 & -1\\ 
+\end{array}\right)
+\frac{1}{\sqrt{2}}\left(\begin{array}{cc} 
+1 & 1\\ 
+1 & -1\\ 
+\end{array}\right) = 
+\frac{1}{2}\left(\begin{array}{cc} 
+2 & 0\\ 
+0 & 2\\ 
+\end{array}\right) = I
+\]
+Second
+\[
+\Qcircuit @C=1em @R=.7em {
+& \gate{X} &  \qw
+} =
+\Qcircuit @C=1em @R=.7em {
+& \gate{H} & \gate{Z}  & \gate{H} &\qw
+}
+\]
+\begin{eqnarray}
+HZH &=&
+\frac{1}{\sqrt{2}}\left(\begin{array}{cc} 
+1 & 1\\ 
+1 & -1\\ 
+\end{array}\right)
+\left(\begin{array}{cc} 
+1 & 0\\ 
+0 & -1\\ 
+\end{array}\right)
+\frac{1}{\sqrt{2}}\left(\begin{array}{cc} 
+1 & 1\\ 
+1 & -1\\ 
+\end{array}\right) \\
+&=& \frac{1}{2}
+\left(\begin{array}{cc} 
+1 & 1\\ 
+1 & -1\\ 
+\end{array}\right)
+\left(\begin{array}{cc} 
+1 & 1\\ 
+-1 & 1\\ 
+\end{array}\right) \\
+&=& \frac{1}{2}
+\left(\begin{array}{cc} 
+0 & 2\\ 
+2 & 0\\ 
+\end{array}\right) \\
+&=& 
+\Qcircuit @C=1em @R=.7em {
+ &\gate{X} & \qw 
+}
+\end{eqnarray}
+This extends to comprobable controlled gates \\
+Third 
+\[
+\Qcircuit @C=1em @R=.7em {
+ &\ctrl{1}& \qw \\
+ &\gate{Z}   & \qw
+} = 
+\Qcircuit @C=1em @R=.7em {
+ &\gate{Z} & \qw\\
+ &\ctrl{-1}& \qw 
+}
+\]
+\[
+\Qcircuit @C=1em @R=.7em {
+ &\ctrl{1}& \qw \\
+ &\gate{Z}   & \qw
+} = 
+\left(\begin{array}{cccc} 
+1 & 0 & 0 & 0\\ 
+0 & 1 & 0 & 0\\ 
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & -1
+\end{array}\right) =
+\Qcircuit @C=1em @R=.7em {
+ &\gate{Z} & \qw\\
+ &\ctrl{-1}& \qw 
+}
+\]
+
+Then we can say that 
+\begin{eqnarray}
+\Qcircuit @C=1em @R=.7em {
+ &\gate{H} & \ctrl{1} & \gate{H}& \qw\\
+ &\gate{H} & \gate{X} & \gate{H}& \qw 
+} &=& 
+\Qcircuit @C=1em @R=.7em {
+ &\gate{H} & \qw & \ctrl{1} & \qw & \gate{H}& \qw\\
+ &\gate{H} &\gate{H} & \gate{Z}&\gate{H}  & \gate{H}& \qw 
+} \\
+&=&
+\Qcircuit @C=1em @R=.7em {
+ &\gate{H} & \qw & \ctrl{1} & \qw & \gate{H}& \qw\\
+ & \qw & \qw &\gate{Z}& \qw &\qw &\qw 
+}\\
+&=&
+\Qcircuit @C=1em @R=1em {
+ &\gate{H} & \qw &\gate{Z}  & \qw & \gate{H}& \qw\\
+ & \qw & \qw &\ctrl{-1} & \qw &\qw &\qw 
+} \\
+&=&
+\Qcircuit @C=1em @R=1em {
+ & \qw &\gate{X}  & \qw & \qw\\
+ & \qw &\ctrl{-1} & \qw & \qw
+}
+\end{eqnarray}
+
+\item
+\begin{enumerate}
+\item 
+
+
+\begin{eqnarray}
+(H \otimes H)(\ket{0}\otimes\ket{0}) &=&
+\frac{1}{2}
+\left(\begin{array}{cccc} 
+1 & 1 & 1 & 1\\ 
+1 & -1 & 1 & -1\\ 
+1 & 1 & -1 & -1 \\
+1 & -1 & -1 & 1
+\end{array}\right)
+\left(\begin{array}{c} 
+1 \\
+0 \\
+0 \\
+0 
+\end{array}\right) \\
+&=&
+\frac{1}{2}
+\left(\begin{array}{c} 
+1 \\
+1 \\
+1 \\
+1 
+\end{array}\right)\\
+&=&\frac{1}{2}(\ket{00} + \ket{01} + \ket{10} + \ket{11})
+\end{eqnarray}
+
+After applying the affect of $\frac{1}{2}U_f(\ket{00} + \ket{01} + \ket{10} + \ket{11})$ and using the notation in the handout equals 
+\[
+\frac{1}{2}(
+\ket{0}\ket{f(0)}+\ket{0}\overline{\ket{f(0)}} +
+\ket{1}\ket{f(1)}+\ket{1}\overline{\ket{f(1)}}
+)
+\]
+Regardless of the output of the function f this can be reduced to 
+\[
+\frac{1}{2}(\ket{0}+\ket{1})(\ket{f(0)} + \overline{\ket{f(0)}} )
+\]
+
+Therefore the output of qbit 1 = $\frac{1}{\sqrt{2}}\ket{0}$ and for qbit 2 = $(\ket{f(0)} + \overline{\ket{f(0)}}0$
+\item 
+This setup does not enable to solve Deutsch's problem since we cannot descriminate based on the output of Qbit 1 whether the function is balenced or not since the output is the same regardless of $U_f$.
+\end{enumerate}
+
+\item %Problem 7
+
+\begin{enumerate}
+\item 
+\[
+\Qcircuit @C=1em @R=1em {
+ & \ket{c} & \qw & \qw & \ctrl{2} & \qw \\
+ & \ket{a} & \qw & \ctrl{1} & \qw & \qw\\
+ & \ket{b} & \qw &\gate{X}  & \gate{X} & \qw
+}
+\]
+\item 
+
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

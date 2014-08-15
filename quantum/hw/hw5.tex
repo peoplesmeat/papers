@@ -1,0 +1,275 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{latexsym,epsf,epsfig}
+\usepackage{amsmath,amsthm}
+
+\input {Qcircuit}
+\xyoption{all}
+
+\begin{document}
+\newcommand{\mbf}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\N}{\mbf{N}}
+\renewcommand{\O}{\mbf{O}}
+
+\newcommand{\braket}[2]{\left \langle #1 \right. \left | #2 \right \rangle}
+
+\noindent Bill Davis \\
+Homework 5 \\
+December 9th 2008
+
+
+\begin{enumerate}
+\item %Problem 1
+\[
+I \otimes H \otimes I = \frac{1}{\sqrt{2}}
+ \left( \begin{array}{cccccccc}
+						1 & 0 & 1  & 0 & 0 & 0 & 0 & 0    \\
+						0 & 1 & 0  & 1 & 0 & 0 & 0 & 0    \\
+						1 & 0 & -1 & 0 & 0 & 0 & 0 & 0    \\
+                  0 & 1 & 0 & -1 & 0 & 0 & 0 & 0    \\
+						0 & 0 & 0 & 0  & 1 & 0 & 1 & 0    \\
+						0 & 0 & 0 & 0  & 0 & 1 & 0 & 0    \\
+						0 & 0 & 0 & 0  & 1 & 0 & -1 & 0   \\
+                  0 & 0 & 0 & 0  & 0 & 1 & 0 & -1    
+						  \end{array} \right)
+\]
+\[
+I \otimes CNOT = 
+ \left( \begin{array}{cccccccc}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+\end{array} \right)
+\]
+\[
+CNOT \otimes I = 
+ \left( \begin{array}{cccccccc}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0
+\end{array} \right)
+\]
+\[
+H \otimes I \otimes I = \frac{1}{\sqrt{2}}
+ \left( \begin{array}{cccccccc}
+1 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 1 \\ 
+1 & 0 & 0 & 0 & -1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & -1 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & -1 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & -1
+\end{array} \right)
+\]
+
+For the Toffoli gate $\ket{110} \rightarrow \ket{111}$ and $\ket{111} \rightarrow \ket{110}$
+\[
+T = 
+ \left( \begin{array}{cccccccc}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 
+\end{array} \right)
+\]
+
+\[
+(I \otimes H \otimes I)
+ \left( \begin{array}{cccccccc}
+\alpha \\
+0 \\ 
+0 \\
+0 \\
+\beta \\
+0 \\
+0 \\
+0 \\
+\end{array} \right) = 
+\frac{1}{\sqrt{2}}
+ \left( \begin{array}{cccccccc}
+\alpha \\
+0 \\ 
+\alpha \\
+0 \\
+\beta \\
+0 \\
+\beta \\
+0 \\
+\end{array} \right)
+\] 
+\[
+(I  \otimes CNOT)\frac{1}{\sqrt{2}}
+ \left( \begin{array}{cccccccc}
+\alpha \\
+0 \\ 
+\alpha \\
+0 \\
+\beta \\
+0 \\
+\beta \\
+0 \\
+\end{array} \right) = \frac{1}{\sqrt{2}}
+ \left( \begin{array}{cccccccc}
+\alpha \\
+0 \\
+0 \\
+\alpha \\
+\beta \\
+0 \\
+0 \\
+\beta
+\end{array} \right)
+\]
+\[
+CNOT \otimes I \frac{1}{\sqrt{2}}
+ \left( \begin{array}{cccccccc}
+\alpha \\
+0 \\
+0 \\
+\alpha \\
+\beta \\
+0 \\
+0 \\
+\beta
+\end{array} \right)= \frac{1}{\sqrt{2}}
+ \left( \begin{array}{cccccccc}
+\alpha \\
+0 \\
+0 \\
+\alpha \\
+0  \\
+\beta \\
+\beta \\
+0 \\ 
+\end{array} \right)
+\]
+\[
+H \otimes I \otimes I \frac{1}{\sqrt{2}}
+ \left( \begin{array}{cccccccc}
+\alpha \\
+0 \\
+0 \\
+\alpha \\
+0  \\
+\beta \\
+\beta \\
+0 \\ 
+\end{array} \right) = \frac{1}{\sqrt{2}}
+ \left( \begin{array}{cccccccc}
+\alpha \\
+\beta \\
+\beta \\
+\alpha \\
+\alpha \\
+-\beta \\
+-\beta \\
+\alpha \\ 
+\end{array} \right) 
+\]
+\[
+T  \frac{1}{\sqrt{2}}
+ \left( \begin{array}{cccccccc}
+\alpha \\
+\beta \\
+\beta \\
+\alpha \\
+\alpha \\
+-\beta \\
+-\beta \\
+\alpha \\ 
+\end{array} \right)  = \frac{1}{\sqrt{2}}
+ \left( \begin{array}{cccccccc}
+\alpha \\
+\beta \\
+\beta \\
+\alpha \\
+\alpha \\
+-\beta \\
+-\beta \\
+\alpha \\ 
+\end{array} \right) 
+\]
+
+
+\item %Problem 2
+From (1) we know that pairs of particles exist with instruction set (A,1;B,?) where ? can be either a -1 or a 1.
+
+ From (2) we know that there are no pairs of particles (A,1;B,?), (A,1;B,1) and from (3) we know that there are no particles (A,1;B,1), (A,1;B,?). Therefore there must be particles being generated with instruction sets (A,1;B,-1) for both particle 1 and particle 2.
+
+ But (4) says that these particles do not exist therefore there is a contradiction. 
+\item %Problem 3
+\begin{enumerate}
+\item 
+
+Measuring a + for the first particle puts the two particle system into the state 
+\[
+\ket{+} \otimes \sqrt{\frac{3}{5}}\ket{-}-\sqrt{\frac{2}{5}}\ket{+}
+\]
+where $Prob(Measure \ket{+})$ for particle 1 = $\frac{3}{8}+\frac{1}{4}=\frac{5}{8}$
+
+Measuring a - for the first particle puts the two particle system into the state 
+\[
+\ket{-}\ket{+}
+\]
+where $Prob(Measure \ket{+})$ for particle 1 = $\frac{3}{8}$
+
+Using this information to complete the table
+
+\begin{tabular}{ c c c }
+ & +,+ & -,- \\
+\hline
+z,u & 0 & $\frac{3}{8}*\frac{2}{5} = \frac{3}{20}$\\
+u,z & 0 & 0.15 \\
+u, u & 0.09 & 0.64 \\
+z,z & $\frac{5}{8} * \frac{2}{5}$ = $\frac{1}{4}$ & $\frac{3}{8}*0=0$\\
+\hline
+\end{tabular}
+
+\item 
+Here if we equate Z with measurement B and U with measurement A then this chart is identical to the equations 1-4. 
+
+\end{enumerate}
+
+\item %Problem 4
+Since U is unitary,
+\begin{eqnarray}
+(U\ket{\psi}\ket{\alpha}, U\ket{\phi}\ket{\alpha}) &=& (\ket{\psi}\ket{\alpha}, \ket{\phi}\ket{\alpha}) \\
+&=& (\ket{\psi}\ket{\beta}, \ket{\phi}\ket{\beta})
+\end{eqnarray}
+
+Then by the definition of the inner product over the tensor product,
+
+\begin{eqnarray}
+(\ket{\psi}\ket{\beta}, \ket{\phi}\ket{\beta}) &=&  (\ket{\psi}\ket{\alpha}, \ket{\phi}\ket{\alpha}) \\
+\braket{\psi}{\phi}\braket{\beta}{\beta'} &=& \braket{\psi}{\phi}\braket{\alpha}{\alpha}
+\end{eqnarray}
+
+Because $\psi$ and $\phi$ are non-orthogonal, then $\braket{\psi}{\phi} \ne 0$
+Therefore, 
+\[
+\braket{\alpha}{\alpha} = \braket{\beta}{\beta'}
+\]
+Where because $\ket{a}$ is some standard initial state $\braket{\alpha}{\alpha}=1$.
+\[
+\braket{\alpha}{\alpha} = 1 = \braket{\beta}{\beta'}
+\]
+
+
+
+
+\end{enumerate}
+\end{document}

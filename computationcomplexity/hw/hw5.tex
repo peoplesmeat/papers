@@ -1,0 +1,42 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{latexsym}
+\usepackage{amsmath,amsthm}
+\usepackage{xy}
+\input xy
+\xyoption{all}
+\begin{document}
+\newcommand{\mbf}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\N}{\mbf{N}}
+\renewcommand{\O}{\mbf{O}}
+
+\noindent Bill Davis \\
+Homework 4 \\
+March 8 2011
+
+\begin{enumerate}
+
+\item
+
+\item
+DTIME($n^{1.1}$) is superior to DTIME(N). The proof of this is identical to the proof that DTIME($n^{1.5}$) is larger then DTIME(N). This is because we can replace the line "There is some number... " with, there is some number $n_0$ such that $n^{1.08} > c'cn\log n$ for every $n>n_0$. In which case the rest of the proof is valid. 
+
+\item
+Say we want to select a random number between 1 and N with equal distribution. First we need to translate this to a number from 0 to N-1. The general idea to is flip a coin, filling in the binary representation of some number 0 to N-1. then add 1 to the number and we have a random number in the correct range. The problem with this approach is that we may end up with a number outside the range. For example, if we are trying to select a random number between 1 and 5, we'll need a minimum of 3 binary digits to do so. However if we select all 1's for our random number, we wind up with 7, which is outside of our range. If we selected such a number the only way to deal with it is to toss it and start again, since there is no way to map that number back into the range and still maintain the equal distribution. This presents another problem because now the algorithm for selecting the random number could take an infinite amount of time, if we keep selecting numbers outside the range and tossing them.
+
+However since the probablity of creating a number outside the range is always less then or equal to 1/2. We know this is true because if it was greater then 1/2 we would be able to reduce the number of binary digits we are using by 1. Therefore given enough iterations we can assure with arbitray confidence actually being able to select a number.   
+
+\item
+In order to compute $a^n$ mod p we could try to use exponentian by squaring  (as described in http://en.wikipedia.org/wiki/Exponentiation_by_squaring). This technique uses a recursive algorithm to compute $a^n$ using $\log_2 n$ steps. For example to compute $a^20$ we note that $20=2*10 = 2*2*5 = 2*2*(2*2+1)$. We could then take the mod of the final answer. However this could easily overflow our memory. Another solution as described in Introduction To Cryptography (washington) is to compute a mod p, a^2 mod p, a^4 mod p, a^8 mod p, a^ 16 mod p ... Then formulate n in binary, and multiply the corresponding powers of a together to compute $a^n$ mod p. 
+
+\item
+Unless P=NP, 3SAT is not in BPP, because if it were then this would contradict 3SAT's NP-Completeness. 
+
+However you could use a probabalistic TM on 3SAT. For example given an 3SAT problem $\phi$ we could just feed this to a probabalistic TM where is randomly assigns values to the variables and then checks to see if the resultant set satifies $\phi$. If it does we are done, if not we can rinse and repeat. Run this enough times and you'll be able to say something like "we've tried X number of the possible Y assignments and haven't found a satifying assignment." This is also a way to distiguish between easy to satify and hard to satisfy. If you try 100 random assignments and they all satisify the equation, then you can likely say that $\phi$ is "easy" to satisfy, versus a $\phi$ which doen't have any satisfying assignments but is in fact satisfyable.     
+
+\item 
+Techniques like simulated annealing, genetic algorithms, neural networks are probabalistic approachs to search designed to produce answers in a tractable amount of time to intractable problems. However each technique has deficiencies that prevent them from being included in a complexity class. Lets examine in particular genetic algorithms. Given a reasonable encoding a genetic algorithm can be used to approach the traveling salesman problem. A genetic algorithm also makes a number of random choices which might appear to include it in BPP. However in order to be included in BPP, a genetic algorithm needs to satisfy two conditions, first to complete in a certain number of steps, and second to complete with some certainty of a correct answer. The first condition can't be satified because a genetic algorithm might restart and isn't guaranteed to complete in any certain amount of time. And second once the algorithm completes we can't be precise in the confidence that the algorithm actually found a solution and not a local minimum/maximum. In fact problems can be pathalogically constructed such that approximation algorithms are almost guaranteed of not finding the actual solution. For these reasons they cannot be included in a complexity class. 
+
+
+\end{enumerate}
+
+\end{document}

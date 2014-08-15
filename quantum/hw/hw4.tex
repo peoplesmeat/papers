@@ -1,0 +1,158 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{latexsym,epsf,epsfig}
+\usepackage{amsmath,amsthm}
+
+\input {Qcircuit}
+\xyoption{all}
+
+\begin{document}
+\newcommand{\mbf}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\N}{\mbf{N}}
+\renewcommand{\O}{\mbf{O}}
+
+\newcommand{\braket}[2]{\left \langle #1 \right. \left | #2 \right \rangle}
+
+\noindent Bill Davis \\
+Homework 4 \\
+November 11 2008
+
+\begin{enumerate}
+\item %Problem 1
+$\ket{\psi_1}$ and $\ket{\psi_2}$ are orthogonal iff $\braket{\psi_1}{\psi_2} = 0$.
+\[
+\braket{\psi_1}{\psi_2} = \sum_{n=1}^{N} (\omega^{n-1})^* \omega^{2(n-1)} = 
+ \omega^{2(n-1) - (n-1)} = \sum_{n=0}^{N-1} \omega^{n}
+\]
+
+Where the summation of the roots of unity equals 0, $ \sum_{n=0}^{N-1} \omega^{n} = 0$ Therefore $\ket{\psi_1}$ and $\ket{\psi_2}$ are orthogonal.	
+\item %Problem 2
+$\ket{\psi} = \sqrt{\frac{3}{8}}\ket{+}_z\ket{-}_z+\sqrt{\frac{3}{8}}\ket{-}_z\ket{+}_z - \frac{1}{2}\ket{-}_z\ket{-}_z$
+
+The probabality of making a "-" measurement on $\ket{\psi}$ is 
+\[
+|\braket{-}{\psi}|^2 = \frac{5}{8}
+\]
+
+This measurement then puts $\ket{\psi}$ into the normalized state 
+\[
+\sqrt{\frac{3}{5}}\ket{-}_z\ket{+}_z + \sqrt{\frac{2}{5}}\ket{-}_z\ket{-}_z = 
+\ket{-}_z \otimes (\sqrt{\frac{3}{5}}\ket{+}_z + \sqrt{\frac{2}{5}}\ket{-}_z)
+\]
+
+The probabality of then measuring $\ket{+}_u$ on the second qubit is 
+\[
+ (cos \frac{\theta}{2})(\sqrt{\frac{3}{5}} ) +
+(-sin \frac{\theta}{2})(\sqrt{\frac{2}{5}})
+\] 
+where $\theta$ = 60. This equals (0.774)(0.866) - (.632)(0.5) = 0.354. 
+
+Then the total probabality equals $\frac{5}{8}*0.354 = 0.221$.
+\item %Problem 3
+QFT$\ket{5}_3 = $ QFT$\ket{101}$. Using the circuit for the 3 bit QFT
+
+\[
+\ket{j_0} \rightarrow R_3H\ket{1} \\ R_2 $ is not applied since $ j_1 = 0
+\]
+\[
+\ket{j_1} \rightarrow R_2H\ket{0} 
+\]
+\[
+\ket{j_2} \rightarrow H\ket{1}
+\]
+
+Where 
+$R_2 = \left( \begin{array}{cc}
+						1 & 0   \\
+						0 & e^{\frac{2\pi i}{2^2}}  \end{array} \right)$ and 
+$R_3 = \left( \begin{array}{cc}
+						1 & 0   \\
+						0 & e^{\frac{2\pi i}{2^3}}  \end{array} \right)$ 
+
+\[
+\ket{j_0} \rightarrow \hat{\ket{\j_0}} = R_3H\ket{1} = \frac{1}{\sqrt{2}}(\ket{0}-e^{\frac{\pi i}{4}}\ket{1})
+\]
+\[
+\ket{j_1} \rightarrow \hat{\ket{\j_1}} = R_2H\ket{0} = \frac{1}{\sqrt{2}}(\ket{0}+e^{\frac{\pi i}{2}}\ket{1})
+\]
+\[
+\ket{j_2} \rightarrow \hat{\ket{\j_2}} = H\ket{1} = \frac{1}{\sqrt{2}}(\ket{0} - \ket{1})
+\]
+
+QFT$\ket{5} = \hat{\ket{\j_0}} \otimes \hat{\ket{\j_1}} \otimes \hat{\ket{\j_2}} $
+
+\item %Problem 4
+The truth table for this circuit is below.
+
+\begin{tabular}{ c c | c }
+
+ $ j_{0}$ &$ j_{1}$ & $ 0 \oplus j_{0} \oplus j_{1} $\\
+\hline
+  0 & 0 & $ 0 \oplus 0 \oplus 0 = 0 $ \\
+  0 & 1 & $ 0 \oplus 0 \oplus 1 = 1 $ \\
+  1 & 0 & $ 0 \oplus 1 \oplus 0 = 1 $ \\
+  1 & 1 & $ 0 \oplus 1 \oplus 1 = 0 $ \\
+\end{tabular}
+
+This is the quantum version of 2 bit boolean XOR. 
+\item %Problem 5
+The truth table for this operation is
+
+\begin{tabular}{ c c | c c}
+ $ j_{0}$ &$ j_{1}$ & $ \hat{ j_{0}}$ & $\hat{j_{1}} $\\
+\hline
+  0 & 0 &  0 & 1 \\
+  0 & 1 &  0 & 0 \\
+  1 & 0 &  1 & 0 \\
+  1 & 1 &  1 & 1 \\
+\end{tabular}
+
+Here $\hat{j_0} = j_0$ and $\hat{j_1} = NOT(j_0 \oplus j_1)$ which can be implemented in a quantum circuit as
+
+\[
+\Qcircuit @C=1em @R=.7em {
+	&  \ctrl{1} & \qw & \qw \\
+   & \targ  & \gate{X} & \qw 
+}
+\]
+
+\item %Problem 6
+The effect of this circuit is 
+\[
+\ket{00} \rightarrow \ket{00}
+\]
+\[
+\ket{01} \rightarrow \ket{01}
+\]
+\[
+\ket{10} \rightarrow \ket{10}
+\]
+\[
+\ket{11} \rightarrow -\ket{11}
+\]
+
+The can be accomplished with the following diagram 
+\[
+\Qcircuit @C=1em @R=.7em {
+	& \qw & \ctrl{1} & \qw & \qw \\
+   & \gate{H} & \targ  & \gate{H} & \qw 
+}
+\]
+\item %Problem 7
+
+The truth table for this circuit is below.
+
+\begin{tabular}{ c c | c c c c }
+
+ $ j_{0}$ &$ j_{1}$ & $ j_{2}$ & $ j_{3}$ & $ j_{4}$ & $ j_{5}$\\
+\hline
+  0 & 0 & 0 & 0 & 0 & 0 \\
+  0 & 1 & 0 & 0 & 0 & 1 \\ 
+  1 & 0 & 0 & 1 & 0 & 0 \\
+  1 & 1 & 1 & 0 & 0 & 1 \\
+\end{tabular}
+
+This circuit computes $b^2$ for 2-bit input b and 4-bit output. That is the values (0,1,2,3) $ \rightarrow$ (0,1,4,9).
+
+\end{enumerate}
+
+\end{document}

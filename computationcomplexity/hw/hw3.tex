@@ -1,0 +1,44 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{latexsym}
+\usepackage{amsmath,amsthm}
+\usepackage{xy}
+\input xy
+\xyoption{all}
+\begin{document}
+\newcommand{\mbf}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\N}{\mbf{N}}
+\renewcommand{\O}{\mbf{O}}
+
+\noindent Bill Davis \\
+Homework 3 \\
+March 1 2011
+
+\begin{enumerate}
+
+\item
+To show that $3COL \in NP$ we need to demonstrate that a polynomial time TM $M$ exists such that a given graph $x$ is 3 colorable if and only if a certificate $u$ exists where our verifier TM $M$ outputs 1 when run with $M(x,u)$
+
+The certificate to 3COL can be a list of colors corresponding to each vertex. In this case, if a graph is 3-colorable a certificate exists which is the coloring of the vertices. A machine to verify the coloring could be run in polynomial time by iterating through all of the edges in the graph and verifying that each end of the edge is a different color. Also, given a random coloring this machine will be able to verify if the coloring is in fact a correct three coloring by outputting zero in the case where two vertices connected by an edge are colored the same.
+
+In each case the algorithm is polynomial in the number of edges in the graph. 
+
+\item
+Part 2. If a language $L$ is NP-hard and $L \in$ P then P = NP. If $L$ is NP-hard, and $L \in $ P, then there exists a $TM$ which can solve T in $cx^k$ time, for constants $c$ and $k$ Since $L$ is NP-hard there exists a polynomial function $f$ which reduces $L$ to $L'$ for all $L'$ in NP. In which case, we can modify T to solve any $L' \in $ NP in at most $f(cx^k)$ time, which is polynomial because $f$ takes polynomial time. Since all $L'$ can be solved by the modifed T in polynomial time, P=NP
+
+Part 3. If a language $L$ is NP-complete then $L \in$ P if and only if P=NP. If $L$ is NP-complete, then it is also NP-hard, in which case we can apply part 2 to show one direction of the if and only if. To prove the other direction, assume that P=NP. Then for an problem in NP a polynomial time exists for any language $L \in$  NP.
+
+\item Show that 3COLOR is NP-Complete. 
+We established in problem 1 that 3COLOR is in NP. All that remains to show is that 3COLOR is NP-hard. To do this we need to produce a polynomial time function which can translate a problem in 3COLOR to 3SAT. Using materials from http://www.cs.princeton.edu/courses/archive/spr07/cos226/lectures/23Reductions.pdf we can describe such a reduction. For a given problem in 3SAT we can produce a graph as follows. First add 3 vertices T,F, and B. Connect these three vertices together. Then add a vertice for each literal used in the 3SAT problem. Connect each of these vertices to B. This will ensure that each vertice is either colored "true" or "false". Connect each literal to its negation, this will ensure that they maintain opposite values. Then for each clause, attach a special 6 node widget to the elements in the clause. This is shown below. 
+
+\vspace{10 mm}
+
+This special 6 node widget ensures that at least on of the nodes in each clause is colored true. Armed with this transformation, which clearly takes polynomial time, since it addes no more then a constant plus 6 nodes for each clause, we can reduce any problem in 3SAT to 3COLOR. This means that, if we have an algorithm for 3-Coloring, we can take any 3SAT problem, transform it into the corresponding 3-colorable graph and use the 3-Coloring machine to solve the 3SAT problem. The coloring of the graph directly translates to the assignment of variables. This shows that 3COLOR is at least as hard as 3SAT. And because 3SAT is NP-complete, then 3COLOR is also NP-complete. 
+
+ 
+
+\item
+I think a good example where combinatorial auction is appropriate is for disk I/O. Seeing as how when two write (or reads) from the disk are close together or overlapping they can be performed faster then when the two operations are interrupted by a third discongrous operation. So the question here would be how to reorder disk operations to achieve the maximum throughput on the disk. 
+
+\end{enumerate}
+
+\end{document}

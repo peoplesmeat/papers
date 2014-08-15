@@ -1,0 +1,72 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{latexsym}
+\usepackage{amsmath,amsthm}
+\usepackage{xy}
+\input xy
+\xyoption{all}
+\begin{document}
+\newcommand{\mbf}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\N}{\mbf{N}}
+\renewcommand{\O}{\mbf{O}}
+
+\noindent Bill Davis \\
+Homework 4 \\
+March 8 2011
+
+\begin{enumerate}
+
+\item
+
+\item
+A winning strategy for X is to place an X in the upper right hand corner. Then regardless of O's next play, X will have a winning move by placing an X in either the upper center square or if it is full the middle right square. 
+
+\item
+The key point, I think, in this equality is that 
+\[
+\psi_i(C,C') = \exists C''\psi_{i-1}(C,C'') \land \psi_{i-1}(C'',C')
+\]
+represents and exponential recursive function, however the modified version 
+\[
+\exists C'' \forall D^1 \forall D^2 (D^1=C \land D^2 = C'') \lor (D^1=C'' \land D^2 = C') \Rightarrow \psi_{i-1}(D^1,D^2)
+\]
+represents the iterative version, where the for all allows us to loop through the nodes. In this equation, the or statement will be true in exactly two situations, first when $D^1=C \land D^2=C''$ and second when $D^1=C'' \land D^2 = C'$. If we can find a $C''$ that, when these equations are satified, then $\psi_{i-1}(D^1,D^2)$, then our statement will evaluate to true. This means that $\psi_{i-1}$ will essentially be "called" twice, once with values $(C,C'')$ and again with values $(C'',C')$. These will be both be true only in the case where there is a path from $C$ to $C'$, which is what we are trying to show, and is what is represented in the first recursive equality. Therefore $C''$ will only exist in the case where out path exists. 
+
+\item
+
+\begin{verbatim}
+f:=booleanFunction
+
+computeByReference(i, bool)
+    if (hasNoQuantifier(f[i]))
+        return f(bool)
+    else if (foreach(f[i]))
+        return computeByReference( i+1, &bool[i]=true) 
+            AND computeByReference(i+1,&bool[i]=false)
+    else if (exists(f[i]))
+        return computeByReference( i+1, &bool[i]=true)
+            OR computeByReference( i+1, &bool[i]=false 
+
+\end{verbatim}
+
+This pseudocode takes a given qualified boolean expression, and computes whether it is satifiable (using some techniques referenced here http://en.wikipedia.org/wiki/PSPACE-complete. At each step of the recursion we check whether we've filled out all of the booleans, or if we are in foreach/exists situation. There is some shorthand to note that we set the ith bith to be true/false before calling the recursive function again. The total space used by this algorithm, for a function with k free variables, is k+klogk, where we need k boolean bits plus k counters. 
+
+\begin{verbatim}
+
+f:= booleanFunction
+computeByValue(bool)
+    if (hasNoQualifier(len(bool))
+        return f(bool)
+    else if (foreach(f[len(bool]))
+        return computeByValue(bool[i]=true) 
+            AND computeByValue(bool[i]=false)
+    else if (exists(f[len(bool)])
+        return computeByValue(bool[i]=true)
+            OR computeByValue(bool[i]=false)
+
+\end{verbatim}
+
+When passing by value we don't need to allocate the entire array at the beginning of the program and can instead increase the size at each step (here the shorthand bool[i] = true indicates create a copy of the array with an extra slot and set the slot to true/false). 
+
+\end{enumerate}
+
+\end{document}

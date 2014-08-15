@@ -1,0 +1,16 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Classical Computability}{3}
+\contentsline {subparagraph}{3SAT}{3}
+\contentsline {subparagraph}{Hilbert's Tenth Problem}{4}
+\contentsline {section}{\numberline {3}Hypercomputation}{4}
+\contentsline {section}{\numberline {4}Adiabatic Quantum Computation}{6}
+\contentsline {subsection}{\numberline {4.1}Constructability of AQC Machines}{7}
+\contentsline {subsection}{\numberline {4.2}The Spectral Gap}{9}
+\contentsline {subsection}{\numberline {4.3}Kieu and Noncomputability}{9}
+\contentsline {section}{\numberline {5}Objections to AQC Hypercomputability}{11}
+\contentsline {subsection}{\numberline {5.1}Probabalistic Nature}{11}
+\contentsline {subsection}{\numberline {5.2}AQC is equivalent to the Standard Model of Quantum Computation}{11}
+\contentsline {subsection}{\numberline {5.3}Infinite Precision}{12}
+\contentsline {subsection}{\numberline {5.4}The existence of decoy ground states}{13}
+\contentsline {subsection}{\numberline {5.5}Infinite Search In Finite Time}{14}
+\contentsline {section}{\numberline {6}Conclusion}{14}

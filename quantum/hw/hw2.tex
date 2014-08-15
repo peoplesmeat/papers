@@ -1,0 +1,227 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{latexsym,epsf,epsfig}
+\usepackage{amsmath,amsthm}
+\usepackage{xy}
+\input xy
+\xyoption{all}
+\begin{document}
+\newcommand{\mbf}[1]{\mbox{{\bfseries #1}}}
+\newcommand{\N}{\mbf{N}}
+\renewcommand{\O}{\mbf{O}}
+\newcommand{\ket}[1]{\left | #1 \right \rangle}
+\newcommand{\bra}[1]{\left \langle #1 \right.|}
+\newcommand{\braket}[2]{\left \langle #1 \right. \left | #2 \right \rangle}
+
+\noindent Bill Davis \\
+Homework 2 \\
+October 21 2008
+
+\begin{enumerate}
+\item %Problem 1
+$ \ket{\psi} = \frac{1}{\sqrt{3}}(\ket{0} \otimes \ket{0}) + 
+\frac{2}{\sqrt{3}}(\ket{1} \otimes \ket{1}) = 
+\left(\begin{array}{c}
+\frac{1}{\sqrt{3}} \\
+0 \\
+0 \\
+\frac{2}{\sqrt{3}} 
+\end{array}\right)$
+
+	
+$ \ket{\psi} = \frac{1}{\sqrt{2}}(\ket{0} \otimes \ket{0}) + 
+\frac{1}{\sqrt{2}}(\ket{1} \otimes \ket{1}) = 
+\left(\begin{array}{c}
+\frac{1}{\sqrt{2}} \\
+0 \\
+0 \\
+\frac{1}{\sqrt{2}} 
+\end{array}\right)$
+
+Then $\braket{\phi}{\psi} = \frac{1}{\sqrt{3}}\frac{1}{\sqrt{2}} + \frac{2}{\sqrt{3}}\frac{1}{\sqrt{2}}$ 
+
+\item %Problem 2
+\begin{enumerate}
+\item 
+
+$\frac{1}{2}(\ket{00}+\ket{01} + \ket{10} + \ket{11}) = \frac{1}{\sqrt{2}}(\ket{0} + \ket{1}) \otimes \frac{1}{\sqrt{2}}(\ket{0} + \ket{1})$
+\item
+$\frac{1}{2}(\ket{00}+i\ket{01} + i\ket{10} - \ket{11}) = \frac{1}{\sqrt{2}}(\ket{0} + i\ket{1}) \otimes \frac{1}{\sqrt{2}}(\ket{0} + i\ket{1})$
+\end{enumerate}
+
+\item %Problem 3
+For two arbitrary vectors \\
+ $(a_{0}\ket{0} + a_{1}\ket{1}) \otimes (a_{2}\ket{0} + a_{3}\ket{1}) =$\\
+$ 
+a_{0}a_{2}\ket{00} + a_{0}a_{3}\ket{01} + a_{1}a_{2}\ket{01} + a_{1}a_{3}\ket{11}$
+
+
+Therefore $ x_{0} = a_{0}a_{2} , x_1 = a_0a_3 , x_2=a_1a_2 , x_3=a_1a_3$ 
+
+In this case $x_0x_3=a_0a_2a_1a_3 = x_1x_2$ If a value exists where $x_0x_3 \ne x_1x_2$ then this value cannot be expressed as a tensor product of two vectors. 
+\item %Problem 4
+\begin{enumerate}
+\item 
+$S_{x} \otimes S_{y}
+\left(\left(\begin{array}{c} 
+1\\ 
+0\\ 
+\end{array}\right) \otimes 
+\left(\begin{array}{c} 
+0\\ 
+i\\ 
+\end{array}\right)\right)=
+\left(\begin{array}{c c c c} 
+0 & 0 & 0 & -i\\ 
+0 & 0 & i & 0\\ 
+0 & -i & 0 & 0 \\
+i & 0 & 0 & 0
+\end{array}\right)
+\left(\begin{array}{c} 
+0\\ 
+i\\ 
+0\\
+0 
+\end{array}\right)=
+\left(\begin{array}{c} 
+0\\ 
+0\\ 
+1\\
+0 
+\end{array}\right)$
+\item
+
+$I \otimes S_{z}
+\left(\left(\begin{array}{c} 
+2\\ 
+1\\ 
+\end{array}\right) \otimes 
+\left(\begin{array}{c} 
+0\\ 
+3\\ 
+\end{array}\right)+ 
+\left(\begin{array}{c} 
+1\\ 
+6\\ 
+\end{array}\right)\otimes 
+\left(\begin{array}{c} 
+1\\ 
+1\\ 
+\end{array}\right)\right)=$ \\
+
+$\left(\begin{array}{c c c c} 
+1 & 0& 0& 0 \\
+0 & -1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & -1
+\end{array}\right)
+\left(\begin{array}{c} 
+1\\ 
+7\\ 
+6\\
+4 
+\end{array}\right)=
+\left(\begin{array}{c} 
+1\\ 
+-7\\ 
+6\\
+4 
+\end{array}\right)$
+
+\end{enumerate}
+\item %Problem 5
+$\ket{\psi} = 
+\left(\begin{array}{c} 
+\frac{1}{\sqrt{2}} \\
+0\\ 
+0\\ 
+0\\
+0\\
+0\\
+0\\
+\frac{1}{\sqrt{2}} 
+\end{array}\right)
+$
+
+$\sigma_{y} \otimes \sigma_{y} \otimes \sigma_{x} = $ \\
+$\left(\begin{array}{c c c c c c c c}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & -1\\
+0 & 0 & 0 & 0 & 0 & 0 & -1 & 0 \\
+0 & 0 & 0 & 0 & 0 & -1 & 0 & 0 \\
+0 & 0 & 0 & 0 & -1 & 0 & 0 & 0 \\
+0 & 0 & 0 & -1 & 0 & 0 & 0 & 0 \\
+0 & 0 & -1 & 0 & 0 & 0 & 0 & 0 \\
+0 & -1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+-1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 
+\end{array}\right)$
+
+Then $\ket{\psi}$ is a eigenvector of $\sigma_{y} \otimes \sigma_{y} \otimes \sigma_{x}$ since $(\sigma_{y} \otimes \sigma_{y} \otimes \sigma_{x})\ket{\psi} = (-1)\ket{\psi}$ with eigenvalue -1. 
+
+\item %Problem 6
+ P($e_{1}) |\braket{e_{1}}{\psi}|^{2} = \frac{8}{25}$ \\
+ P($e_{2})= |\braket{e_{2}}{\psi}|^{2} = \frac{9}{25}$ \\
+ P($e_{2})= |\braket{e_{2}}{\psi}|^{2} = \frac{8}{25}$
+
+\item %Problem 7
+\begin{enumerate}
+\item %Problem 7A
+Let $A = \ket{\phi_1}\bra{\phi_1} + \ket{\phi_2}\bra{\phi_2} + \ket{\phi_3}\bra{\phi_3}$. In this case A can be represented by a 3x3 matrix.\\ We need to show that $A\ket{\psi} = I\ket{\psi} = \ket{\psi}$ for an arbitrary $\ket{\psi}$.
+
+Since $(\phi_1, \phi_2, \phi_3)$ form an orthonormal basis we can express any arbitrary $\ket{\psi} = c_1\ket{\phi_1} + c_2\ket{\phi_2} + c_3\ket{\phi_3}$ where each coefficient $c_i = \braket{\phi_i}{\psi}$
+\begin{eqnarray}
+A\ket{\psi} &=&  (\ket{\phi_1}\bra{\phi_1} + \ket{\phi_2}\bra{\phi_2} + \ket{\phi_3}\bra{\phi_3})\psi \\
+&=&\ket{\phi_1}\bra{\phi_1}\psi + \ket{\phi_2}\bra{\phi_2}\psi + \ket{\phi_3}\bra{\phi_3}\psi \\
+&=&  c_1\ket{\phi_1} + c_2\ket{\phi_2} + c_3\ket{\phi_3} \\
+&=& \ket{\psi}
+\end{eqnarray}
+Therefore, A=I.
+\item %Problem 7B
+$(\ket{\alpha}\bra{\beta}) =
+\left(\begin{array}{c c c c }
+\alpha_0 \\
+\alpha_1 \\
+\alpha_2 \\
+...
+\end{array}\right)
+\left(\begin{array}{c c c c }
+\beta_0^* & \beta_1^* & \beta_2^* & ... 
+\end{array}\right)
+=
+\left(\begin{array}{c c c c }
+\alpha_0\beta_0^{*} & \alpha_0\beta_1^{*} & \alpha_0\beta_2^{*} & ...\\
+\alpha_1\beta_0^{*} & \alpha_1\beta_1^{*} & \alpha_1\beta_2^{*} & ...\\
+\alpha_2\beta_0^{*} & \alpha_2\beta_1^{*} & \alpha_2\beta_2^{*} & ...\\
+... & ... & ...
+\end{array}\right)$
+
+$(\ket{\beta}\bra{\alpha}) = 
+\left(\begin{array}{c c c c }
+\beta_0\alpha_0^{*} & \beta_0\alpha_1^{*} & \beta_0\alpha_2^{*} & ...\\
+\beta_1\alpha_0^{*} & \beta_1\alpha_1^{*} & \beta_1\alpha_2^{*} & ...\\
+\beta_2\alpha_0^{*} & \beta_2\alpha_1^{*} & \beta_2\alpha_2^{*} & ...\\
+... & ... & ...
+\end{array}\right)$
+
+And because $A^{\dag}$ is the complex conjugate A with the rows and columns interchanged $(\ket{\alpha}\bra{\beta})^{\dag} = (\ket{\beta}\bra{\alpha})$.
+\item %Problem 7C
+If $A = \ket{\phi_1}\bra{\phi_2} + \ket{\phi_2}\bra{\phi_3} + \ket{\phi_3}\bra{\phi_1}$ then by ii $AA^{\dag} = $ 
+\[
+(\ket{\phi_1}\bra{\phi_2} + \ket{\phi_2}\bra{\phi_3} + \ket{\phi_3}\bra{\phi_1})
+(\ket{\phi_2}\bra{\phi_1} + \ket{\phi_3}\bra{\phi_2} + \ket{\phi_1}\bra{\phi_3})
+\]
+And by i this equals $\ket{\phi_1}\bra{\phi_1} + \ket{\phi_2}\bra{\phi_2} + \ket{\phi_3}\bra{\phi_3} = I$
+
+Therefore A is unitary. 
+\end{enumerate}
+
+\item %Problem 8
+A and B are hermitian operators. Therefore their eigenvectors form an orthonormal basis. We need to show that if $\alpha_i$ are the eigenvectors of A and $\beta_i$ are the eigenvectors of B, that $\alpha_i=\beta_i$. 
+\begin{eqnarray}
+AB\alpha_i &=& BA\alpha_i \\
+&=& Ba_i\alpha_i \\
+&=& a_iB\alpha_i
+\end{eqnarray}
+There should be some way to show here that $B\alpha_i = Bb\alpha_i$, but I'm not seeing it.
+\end{enumerate}
+
+
+\end{document}
