@@ -1,0 +1,521 @@
+                          \--------------------------------------------------/
+                           \        CAPCOM CPS2 System and Games FAQ        /
+                            >       by Chris Mullins, copyright 1999       <
+                           /     VERSION 1.1c  e-mail:CMull11217@aol.com    \
+                          / -------------------------------------------------\
+
+
+            If you want to see the updated version of this FAQ(and my other FAQs as well), 
+                              point your browser to the following address:
+                          http://members.aol.com/CMull11217/private/index.htm
+
+                                       Last updated  11/17/99
+ 
+        For best printing results, print using Landscape mode, on Econofast type setting.
+
+            BY THE WAY, THIS FAQ IS NOT ENDORSED BY CAPCOM ENTERTAINMENT CORPORATION!!
+
+
+TOTAL QUESTIONS ANSWERED: 23
+
+   Table of Contents
+---------------------------
+
+ FREQUENTLY ASKED QUESTIONS
+  -General
+  -Japanese/U.S.A./Asian/Europe Controversy
+  -"Capcom Suicide"
+
+ GAME LIST
+  -Complete CPS2 Game List
+  -Japanese only releases
+  -Japanese->U.S.A./Asian/Europe Name Conversion List
+
+ MARKETPLACE
+  -Price List for CPS2 Boards
+  -Retailers and Distributors of Capcom Equipment
+
+ OTHER
+  -Past Updates
+  -Coming Soon to my FAQ!
+  -Special Thanks
+  
+----------------------------
+
+ FREQUENTLY ASKED QUESTIONS
+
+ |-------------------|
+ | GENERAL Questions |
+ |-------------------|
+
+
+----What are the specifications of the CPS2 Hardware?
+        Well, to be frank about it, I do not know the specifications of this hardware.
+My best guess, is that Capcom didn't publish the CPS2(Capcom Play System 2) hardware specs, 
+or that they published it once in 1993(its debut).  Anyways, I'll try my hardest to find 
+the specs, and when I do, they will be put here.  Below, are some of the specs of the CPS2 
+hardware, and the memory limits on it(even though it was broken by Marvel Super Heroes VS 
+Street Fighter in 1997):
+
+ Color per object:            16
+ Color Palette:               32
+ Total On-Screen Colors:    4096
+ Object Number:        900(16x16)
+ Scroll Faces:                 3
+ Maximum Capacity:      322 Megs
+(* Maximum Capacity has been broken as of 1997, do not use this as a guideline)
+
+        Mind you, that these arcade games look beautiful, such as Street Fighter Alpha 3;
+Capcom's brilliant programmers can work around the shortcomings(well, compared to the newer 
+arcade platforms) of the CPS2 hardware very well.  Don't let the specifications stop you...:)
+
+
+----What does the CPS2 system look like?
+         Imagine two oblong pieces of plastic(kind of heavy, and about as big as a
+VCR)neatly sandwiched together, showing no innards whatsoever.  That's what you get with
+the CPS2.  The motherboard is on the bottom of the sandwich; the game(or B Board, as it
+will be referred to from now on) is on top.
+         The motherboard is jet black, the B Board can be 1 of 3 different colors(for an
+explanation on this, see "Japanese/U.S.A./Asian/Europe Controversy" below).
+         On the motherboard, there are no markings whatsoever, except for a manufacturing
+number on the back of it.  The B board, has a manufacturing number, an AAMA number(if it's
+a U.S.A. board), and a nicely drawn sticker, depicting the game which you are operating
+currently.  Very neat looking! :)  On the side of the B Board, right above where the JAMMA
+hookup is, when you hook up the A to the B Board, there are 3 ports, REGISTER, COMM OUT, and
+COMM IN.  Those ports are for games that need them(fighters do not).
+         Finally, the motherboard has a heatsink, and a fan(pretty powerful, you can cool 
+yourself off this way)that cools off the A board(motherboard, it will be referred to as 
+the A board from now on).  When it comes to connecting the boardset(A and B board combination), 
+there are a few connectors, such as the JAMMA connectors, the Extra button wiring, and the 
+Q-Sound jacks for audio.  That is about it, except for the fact that the A board has three 
+buttons on the side of it, which are Volume + and -, and TEST.
+
+
+----What's this about ORANGE CPS2 B boards?
+	    The speculation, by a couple emulator hounds, is that ORANGE CPS2 B boards
+exist, in Spanish form.  Well, that is NOT the case.  It seems, a distributor in South
+America decided to repaint some CPS2 B boards in ORANGE, and they aren't worth no where
+near as much as BLUE or GREY boards.  I wouldn't sweat it, as I am a HIGH VOLUME seller
+of CPS2 boards, and I've never came across these.
+
+
+----What is the TEST feature?
+          The test feature interrupts the game in progress, and in it, you can test the 
+color inputs, the controllers, the background music, the ROMs themselves, and you can
+switch the difficulty of the game as well.  Also, you can choose how many coins to pop in
+per credit, timer speed, and such.  It is a neat function.
+
+
+----How do I play the CPS2 setup on my TV?
+          You need a machine called the Super NOVA(Super Gun), which is an RGB->NTSC
+converter, and JAMMA harness all in one!  You get 2 heavy duty joysticks with it as well!
+It comes with also the extra button wiring(if you don't have one, ask stevee@microsoft.com
+for one, he has many of them).
+           How do you get one of these?  Well, for $295, you can get one from MAS Systems
+(the innovator of the Super Gun), at (714)831-5760.  And sorry, you can't get a cheaper
+model in the U.S.A. :(  I'd advise you to get an S-Video capable TV, otherwise your arcade 
+games will look like shit(yes, making it composite will make it look like pure dog poop.  
+Trust me on that one. 
+
+
+----Is this JAMMA?  Extra button wiring?
+           Yes, this is directly JAMMA, as stated above.  Just plug into your Super NOVA
+(or arcade cabinet), and play!  But, you need the extra button wiring, and for that, just
+ask stevee@microsoft.com, or buy a new CPS2 A Board.  That extra button wiring is very
+important.
+
+
+----I can't get the kick buttons to work!
+           That's because you forgot to wire up the extra hookup out of the Super NOVA
+(or arcade cabinet)to the extra button hookup that you got from stevee@microsoft.com, 
+or when you got a new A board.  Don't worry, since below are the schematics for you to 
+just stick the extra wires from the NOVA into the extra button wire hookup.  Take the 
+wires from the Super NOVA that don't have a hook-up, and stick each ONE in one of the
+slots below(I'll tell you where):
+
+|-----------------------------------------------------|
+|  |  |  |  |6 |  |  |5 |3 |1 |2 |4 |  |  |  |9 |11|8 |
+|-----------------------------------------------------|
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |10|  |7 |
+|-----------------------------------------------------|
+
+1. This is Weak Punch, put TEAL/LIGHT BLUE wire here
+2. This is Weak Kick, put OLIVE GREEN wire here
+3. This is Medium Punch, put DARK RED wire here
+4. This is Medium Kick, put DARK PINK wire here
+5. This is Fierce Punch, put LIGHT PINK wire here
+6. This is Roundhouse Kick, put DARK PURPLE wire here
+7/8. These are grounding wires, put BLACK wires here
+*Below are wires that may or may not be part of the hookup. These are not necessary.*
+9/10. These are VOLUME UP and DOWN wires, put appropriate wires here
+11. This is a grounding wire for the volume controls, put BLACK wire here
+
+           If you have any questions, feel free to contact me at CMull11217@aol.com.
+
+
+----How do I take advantage of Q-Sound?
+           Probably one of the greatest inventions ever in the arcade industry, Archer Labs'
+Q-Sound technology allows more realistic feeling of the game's sound effects and background
+music.  Due to that, it won't be real effective to use this on your TV(unless you have a
+killer home stereo system, like from Onkyo or Bose), and you should just stick your stereo
+jacks to your Super NOVA, instead of the CPS2 boardset itself.
+           But, if you have a killer stereo system, or an arcade cabinet, then you're in luck!
+Just plug in each speaker(left and right), to their respective jacks on the CPS2 boardset. 
+Then, prepare for the ride, because the feeling will blow you away!  Well, pretty much, anyway..
+
+
+----Why all the copyright messages and time-stamp, when you turn on the game?
+           This IS an arcade game, ya know.  :)  The environmental messages, and the "Drug 
+Users are Losers" message by William Sessions are mandatory, by the way.  The time stamp
+when you turn on the game tells you what game is being played right now, what date it was
+released, and whether it's Japanese/U.S.A./Asian/Europe.  See below for an example from
+Marvel Super Heroes VS Street Fighter:
+
+                                  MARVEL SUPER HEROES
+                                   VS STREET FIGHTER
+                                         970625
+                                         U.S.A.
+
+           The date reads June 25, 1997, as the year is first, followed by the month and day.
+
+
+----How do I stabilize the CPS2 boardset?
+           Well, you don't the A+B set to be moving around anywhere in your arcade cabinet,
+do you?  Well, first, when you buy a new CPS2 A board, you get two clips, that clip in between
+the A and B board, holding them together.  They'll hold together without them, but it's good
+to make sure of that.
+           To keep it stable in the arcade cabinet, it needs to be screwed down.  There's 1
+hole in the boardset(around the perimeter of the boardset) that you use bolt down to the
+particle board(wood?) in the cabinet.  That is what you do, to keep it stable. :)
+
+
+----Can I write Capcom Coin-Op Division of America?
+          Of course you can!  They welcome your comments, and questions about their products.
+Their address is as follows:
+
+    CAPCOM COIN-OP DIVISION
+    475 Oakmead Parkway
+    Sunnyvale, CA 94086  U.S.A.
+
+   Their phone number is (408)522-5331.  You can fax to that number as well.
+
+
+----What's expected of the CPS2 Hardware in the future?
+          In 1999, there will be at least 4 more titles for it, and will be supported till
+the year 2003 at least.  It's one of the longest lasting systems of all time(besides the
+SNK Neo-Geo), and will be supported for longer still, due to the flexibility of the system
+itself.
+
+
+----What's this about CPS2 Emulation?
+          Capcom designed the CPS2 boardset so well, that even after 6 years, no one can
+crack the graphics codes yet.  I am against emulation, as it's the cheap way to play these
+games, instead of actually buying the board or chipping in some quarters in the arcade.
+On a computer, it's watered down, and people make unfair assessments of certain games, 
+not like when you buy a board.  Then, you can make a good assessment(or if you play some
+in the arcades, for about a few hours or so) of it.
+          I hope the graphics codes will never get cracked, but by the time they do, we'll 
+be playing Street Fighter 5...:)
+
+
+----How can I get the secret characters in Street Fighter Alpha 3?
+          In order to do so, the B Board must have at least a month playing time on it. 
+That means you have to have the game running a total of 720 hours in order to play as
+Balrog, Juni, and Juli(don't forget the 3 additional -ism's).
+          Other boards from Capcom will have this in the future, so if you want to find
+the secrets, play the crap out of it!  For arcade operators, this is second nature(letting
+it run for a month).  But for collectors, this may take a while.  Don't fret..
+
+
+----Do you have some CPS2 Games for sale?
+	    Yes, in fact, I do!  I am a HIGH VOLUME seller of CPS2 Capcom and SNK Neo-Geo
+arcade games!  So, email cmull11217@aol.com for a price list!
+
+
+|---------------------------------------------------|
+| JAPANESE/U.S.A./ASIAN/EUROPE CONTROVERSY Questions|
+|---------------------------------------------------|
+
+
+----What's the differences between the Japanese, U.S.A., and Asian B Boards?
+         Remember when I said that the B Boards come in 3 colors?  Well, they do, 1 for each
+of the following versions: Japanese(light neon green), U.S.A.(dark blue), Asian(dark grey).
+This isn't like SNK boards, the GAME determines the language, not the motherboard.
+         Asian and U.S.A. are in English, Japanese boards are in Japanese.  So why don't
+peopl buy more Asian boards?  Well, the Grey boards have one connector pin inverted(male), 
+whereas the U.S.A. and Japanese have all 4 connectors the same style(female).  
+         It is also illegal to operate an Asian or Japanese board in the U.S. and Canada
+for profit, as it is comprehended as copyright infringement.
+
+
+----Aw come on!  I want cheap Japanese boards in my arcades!  It'll save me money....
+         I'm sure it will save you money too.  But, the reason why it is comprehended as
+copyright infringement, is that it's taking away from Capcom Coin-Op of America's sales,
+and giving some to the Japanese, which is something that Capcom doesn't like.  Also, who
+wants to see Japanese kanji in an American arcade, when 95% of the population has no
+Japanese learning experience whatsoever?  
+         Some places it is allowed, when Japanese majority is over 75% of a certain place.
+But when you get Japanese boards, Capcom Coin-Op of America REFUSES to service them, so
+there's another reason to get U.S.A. boards. If you're a collector, then Japanese or Asian
+boards are right for you.  But, U.S.A. boards are worth the extra money, as they are easily 
+serviceable, don't depreciate as much, and are more lucrative as a whole.  Perfect for the
+arcade, and for distinguished collectors.
+
+
+----Are all the motherboards the same?
+         No they are not, in the instance that the 3 buttons on the side of it are in the 
+colors of the origin(the buttons are Volume + and -, and Test; the colors are the same as 
+the B Board colors above).  So, an Asian A board has grey buttons, a U.S.A. one has blue 
+buttons.   Also, the Asian A board has one pinout inverted, the Japanese and U.S.A. ones 
+have all 4 connectors the same.  The reasoning behind that, is so U.S.A. operators don't buy
+the cheaper Asian boards as substitutes.
+
+
+----I'm sure there are European B boards, right?
+         Yes, there are European B boards, which are compatible with U.S.A./Japanese A boards,
+and are BLUE like the U.S.A. boards.  They lack all the environmental messages and other
+"drug users are losers" messages.  Some European boards that are stamped Europe, are actually
+grey Asian boards.  But, for the most part, they are BLUE, just like U.S.A. ones.
+
+
+----What is the price difference between the different kinds of B boards?
+         Well, in Japan and Asia, arcade operators cycle through their games VERY fast, 
+meaning that the prices of the games drop really fast.  For example, Street Fighter Alpha 3
+on Asian cost $1250 on 6/30/98, but on 2/20/99, it cost $325, and on 11/11/99, it costs $150.
+On U.S.A. format, the same game that was $1250 on 6/30/98 now costs $850 on 2/20/99, and $350 
+on 11/11/99.  See, that's why the U.S.A. boards are THAT much more lucrative(but still 
+depreciate a lot!).
+
+
+
+ |--------------------------|
+ |"CAPCOM SUICIDE" Questions|
+ |--------------------------|
+
+
+----My board doesn't work!  What should I do?
+         First, before you assume that your B board has a dead battery, check all outside
+connections(JAMMA harness, Extra button wiring, and Q-Sound jacks if applicable) to the A board.
+Then, make sure that the A and B boards are nicely pressed together(you can put the clips in, 
+to make 100% sure they won't go anywhere).  If that doesn't help your situation, then read the
+following statement below.
+
+
+----What's this about the "Capcom Suicide"?
+         This is probably the only achilles' heel of the CPS2 hardware; the fact that after 5(or so)
+years of a B Board being in storage, the battery will die, and the code that the game receives 
+when the A Board gives its "System Check", is lost; therefore, you have a dead board. Now, even 
+if you replace the battery, it'll still be dead, because there is no code to be detected from
+the A board to the B Board.
+         If a game is powered most of the time, or even part of a day; it will keep going and 
+going for even decades.  Because of that, it doesn't need its reserve energy.  But, if it's in
+storage for a long time, be warned:  Games like Super Street Fighter 2 and Eco Fighters
+will be in danger of dying very soon, as this is 1999(they were made in 1993-1994). The above two
+games will die if they've been in storage for 5 years; if they have been played a lot, they
+will still be alive and kicking!
+         I am trying to work on a solution to this problem; I will let you readers know what's
+going on when I figure out a solution, or a work-around to this problem.  If you have any more
+questions, feel free to e-mail me at CMull11217@aol.com.  I thought though, that the best thing
+to do, was to put in a new battery before it dies, but because there is a security chip tied to
+the battery(parallel in circuit), replacing the battery will be ineffective.  It will die when
+you take out the old battery, working or not.  But, Capcom replaces the battery and security
+chip for $75(not including shipping), so you can ask them to REVIVE your dead boards, or it'll be
+more secure for you to buy older CPS2 boards....:) But WAIT, if you solder a "working" battery to
+the board, while you take out the real battery, it'll work!  See the URL below for more information.
+         There may be a way to save those CPS2 B boards of yours!  Go to the following URL:
+ http://www.online-club.de/~arcade2/suicidecps.htm
+         There are descriptions of what is needed to be done, to get your dead B Boards working
+again!  REMEMBER, I TAKE NO RESPONSIBILITY FOR WHAT YOU DO FROM NOW ON, on the subject of changing
+batteries on CPS2 B boards.
+	   IMPORTANT!  You can only replace the battery in working boards.  So, replacing the 
+battery BEFORE it dies is the way to do it.  And, CAPCOM will only take boards back through
+a distributor, not from personal users.
+
+
+----Which games are affected by the "Capcom Suicide"?
+         Basically, any CPS2 B Board(A Boards are not affected) that is over 5 years old is
+prone to this problem.  Games like X-Men VS Street Fighter(1996-newer), or games that have
+been played a lot, will keep on truckin' for a while.  Trust me on this. :)
+
+
+-----------------------------
+
+  GAME LIST ---(All Games are in Japanese name)---
+*Japanese->U.S.A./Asian/Europe converted names are below the list
+
+ 30 Separate Games Indexed
+                                             Rating(1 worst-10 best)
+------------------------------------------------------------------------------
+19XX: The Battle Against Destiny                        9, vertical shooter(1996)
+Alien vs Predator                                       6, side-scroller(1994)
+Battle Circuit                                          8, side-scroller(1997)
+CyberBots                                               8, great fighter(1995)
+Dungeons and Dragons 1:Tower of Doom                    5, side-scroller(1994)
+Dungeons and Dragons 2:Shadow over Mystara              6, side-scroller(1996)
+Giga Wing                                              10, vertical shooter(1999)
+Marvel Super Heroes                                     6, fighter(1995)
+Marvel Super Heroes vs Street Fighter                   9, excellent fighter(1997)
+Marvel vs Capcom                                        9, excellent fighter(1998)
+Pocket Fighter                                          8, original fighter(1997)
+Powered Gear                                            5, side-scroller(1994)
+Quiz Naneiro Dreams                                     8, Japanese quiz game(1996)
+Rockman 2: The Power Fighters                           5, fighter(1995)
+Street Fighter Zero                                     4, fighter(1995)
+Street Fighter Zero 2                                   5, fighter(1996)
+Street Fighter Zero 2 Alpha                             8, great fighter(1996)
+Street Fighter Zero 3                                   9, excellent fighter(1998)
+Super Muscle Bomber                                     6, wrestling game(1994)
+Super Puzzle Fighter 2 X                               10, superb puzzle game(1996)
+Super Street Fighter 2                                  7, good fighter(1993)
+Super Street Fighter 2 X                                9, classic fighter(1994)
+Ultimate Ecology                                        6, horizontal shooter(1994)
+Vampire                                                 6, fighter(1994)
+Vampire Hunter                                          5, fighter(1995)
+Vampire Hunter 2                                        7, good fighter(1997)
+Vampire Savior                                          8, great fighter(1996)
+Vampire Savior 2                                        8, great fighter(1997)
+X-Men: Children of the Atom                             4, fighter(1994)
+X-Men vs Street Fighter                                 8, great fighter(1996)
+------------------------------------------------------------------------------
+
+
+----JAPANESE ONLY Game List
+        The games which were only released in Japan are the following:
+
+Battle Circuit
+Quiz Naneiro Dreams
+Rockman 2:The Power Fighters
+Street Fighter Zero 2 Alpha
+Vampire Hunter 2
+Vampire Savior 2
+
+
+----Japanese->U.S.A./Asian/Europe Name Conversion List
+*on the left is the Japanese name, on the right is the U.S.A/Asian name, if there
+is a name change at all...most games do not need a name change*
+
+Pocket Fighter=Super Gem Fighter
+Powered Gear=Armored Warriors
+Street Fighter Zero=Street Fighter Alpha
+Street Fighter Zero 2=Street Fighter Alpha 2
+Street Fighter Zero 3=Street Fighter Alpha 3
+Super Muscle Bomber=Saturday Night Slam Masters 2
+Super Puzzle Fighter 2 X=Super Puzzle Fighter 2 Turbo
+Super Street Fighter 2 X=Super Street Fighter 2 Turbo
+Ultimate Ecology=Eco Fighters
+Vampire=Darkstalkers
+Vampire Hunter=Night Warriors
+Vampire Savior=Darkstalkers: Jedah's Damnation*
+
+*there are US BLUE boards with Vampire Savior on them,
+instead of "Darkstalkers: Jedah's Damnation".
+
+
+--------------------------------
+
+ MARKETPLACE
+
+----Price List for CPS2 U.S.A./EUROPE Boards
+*first price is when companies sell used B boards, second price is when they sell the B Board 
+NEW(with marquee, artwork, manual), and third is when it is an A+B boardset*
+
+                                                  Used B   NEW B   NEW A+B
+------------------------------------------------------------------------------
+19XX: The Battle Against Destiny                   140      300      500
+Alien vs Predator                                   50       85      160
+Armored Warriors                                   125      250      400 
+CyberBots                                          200      325      500
+Darkstalkers                                        60       80      160
+Darkstalkers: Jedah's Damnation                    200      300      500               
+Dungeons and Dragons 1:Tower of Doom                80      100      225   
+Dungeons and Dragons 2:Shadow over Mystara         225      325      550
+Eco Fighters                                       225      350      550
+Giga Wing                                          375      500      795
+Marvel Super Heroes                                 80      100      225 
+Marvel Super Heroes vs Street Fighter              250      400      675   
+Marvel vs Capcom                                   500      775      995 
+Night Warriors                                     125      175      300
+Saturday Night Slam Masters 2                      225      350      550              
+Street Fighter Alpha                                60       90      160    
+Street Fighter Alpha 2                              80      150      275     
+Street Fighter Alpha 3                             170      350      500
+Super Gem Fighter                                  150      400      575
+Super Puzzle Fighter 2 Turbo                       150      275      425       
+Super Street Fighter 2                              60       90      160   
+Super Street Fighter 2 Turbo                        60       90      160        
+X-Men: Children of the Atom                         60       90      160    
+X-Men vs Street Fighter                            150      300      500    
+------------------------------------------------------------------------------
+
+*I have not listed Japanese only boards here, for prices on them, e-mail me and I'll let
+you know.  On the ones here, for Japanese, subtract 30% on the prices, and for Asian, 
+subtract 35% on these prices.  These prices are for U.S.A./EUROPE Boards.*
+
+
+----Retailers and Distributors
+50th State Coin-op:(800)424-5050 (doesn't have a good selection at all)"www.gamegod.com"
+Automaticos Valls:(34)96-291-7026 (this place in Spain has got the goods)"www.automaticosvalls.com"
+Bondeal: no phone # (a great source for arcade stuff)"www.bondeal.com.hk"
+Bumper:(61)3-9696-9690 (Australia's best CPS2 Source)"www.bumper.com.au"
+Coinop International:(612)321-9632 (very good source of CPS2 stuff, great to deal with)"www.coinopintl.com"
+Cosmic Amusements: (852)2388-2101 (great Hong Kong source for CPS2 equipment)"home.netvigator.com/~cosmicco"
+Creideas: no phone # (great foreign source for CPS2 equipment)"www.vnet.es/creideas"
+Fuuki: no phone # (excellent Japanese CPS2 Source)"www.mediawars.or.jp/~fuukico/"
+Game City:(626)573-3832 (has CPS2 boards and other video games)"www.gamescity.com"
+Great Western Trading:(541)726-1813 (has some CPS2 boards)"www.gwtrading.com"
+Hugo Neumann:(800)998-4846 (good, but high priced CPS2 carts sometimes)
+Kimble:(353)42-36574 (Ireland's finest supplier of arcade equipment)"www.kimble.ie"
+MAS Systems:(714)831-5760 (accessories, and the Super NOVA dealer!)"www.massystems.com"
+Midwest Amusements:(847)364-7722 (has some CPS2 carts, a couple rare ones)"www.midwestamusement.com"
+MHP Ent. Ltd.:(44)125-45-6029 (another CPS2 source in the UK, call for info)"www.mhpuk.mcmail.com"
+Mondial Group:(914)738-7411 (is a little high in the price department)"www.mondialgroup.com"
+Outer Limits Amusements:(800)474-2637 (has some decent CPS2 stuff, nothing special)"www.outerlimitsgames.com"
+Presto PCB's: no phone # (Steve Eisner's selling place for lots of CPS2 stuff)"www.cdc.net/~presto/pcb"
+Rent-A-Game:(416)650-3718 (Canadian supplier of CPS2 units)"www.rent-a-game.com"
+Sage Electronik AG:(41)61-691-1555 (Swiss dealer in CPS2)"www.sage-ag.ch"
+State Sales and Coin:(410)646-4100 (CPS2 boards, complete machines)"www.sscoin.com"
+Tuning:(49)89-311073 (Germany's source of good CPS2 boards, quality, and sometimes high priced)"www.tuning.com/english"
+Video Connection:(800)444-6854 (CPS2 everything, board prices are good)"www.videoconnect.com"
+Worldwide Distributors:(773)384-2300 (okay source for CPS2)"www.dirs.com/update/wwdi/wwdi.txt"
+
+
+-----------------------------
+
+ OTHER
+
+
+----Past Updates
+
+ v.0.1: First version, very rudimentary. (8/10/98)
+ v.1.0-1.0c: First released version, has lots of new info, especially about the "Capcom Suicide issue".
+(2/20/99)
+ v.1.1-1.1c: More questions answered, and more info about the pinouts....(current)
+
+----Coming Soon to my FAQ!
+
+ v.1.2: New information pertaining to battery issue...
+
+----Special Thanks
+
+ I'd like to thank Coin-Op International, Steve Eisner, Chris Ray, Carey Durant, Greg Goff,
+Hal Lowe, Andreas Nowitzki, Mike Dean, and everyone else that I forgot to credit 
+for helping me make this FAQ.  Thank you all for helping me, and for reading this FAQ.
+
+ |----------------------------------------------------------------------------------------|
+ <Copyrighted 1997, 1998, 1999 by Chris Mullins, all rights reserved. Any republication of>
+ <this material, without written consent from myself(Chris Mullins), and credit to myself,> 
+ <will be subject to fines and/or sentencing due to plagiarism.                           >
+ |----------------------------------------------------------------------------------------|
+
+  /-------------------------------------\
+ /|-------------------------------------|\
+< | Chris Mullins's CPS2 FAQ 1.1c  END  | > 
+ \|-------------------------------------|/   
+  \-------------------------------------/
+
+
+
+
+
+
+

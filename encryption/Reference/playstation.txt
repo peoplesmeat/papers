@@ -1,0 +1,30 @@
+Playstation games cost upwards of 50$CDN, while CD-Rs cost less than one dollar each. An obvious question is why wouldn't someone just burn copies of their favorite games, and avoid paying the high retail price. The first reason is that this is illegal. The second is that it is morally wrong. The third is Sony's ingenious copy protection scheme to differentiate burned discs from "real" ones. It is this third reason that this entry is concerned with.
+
+The Playstation copy protection works by reading the checksum values of the first few blocks of the disc. Real Playstation discs have a checksum value of zero on the first few blocks. Authorized Sony disc producers have "special" disc writers that ensure the checksum is correct. One may ask "ok, so why can't we write zero-checksums on a burned disc?" The answer is that on a typical home CD-R burner, the checksum data is determined at write-time by the burner itself, and not by the computer. Also there is no combination of data that will produce the required zero-checksum.
+
+"So how about we start booting a real Playstation game and then swap in the copy after a few seconds?" This strategy actually did work for early series Playstations, but also involved modifying the Playstation's disc reader cover so that it could be open without letting the console know. Other "swaptricks" required the use of game cheat devices such as the Action Replay or the GameShark. In any case, this hole was quickly patched by Sony in later series models.
+
+The solution to the burned game dilemma came in the form of the mod chip. This device was a programmed PIC chip that would intercept signals on the mainboard that claimed the CD was a burn, and insert required "this CD is real" signals. The PIC code was altered several times, and ultimately stabilized in the version known as "Stealth Mod 2". This chip is connected to the playstation mainboard with no less than seven wires, and the wires go all over the board. Some of the wires connect directly to pins of chips on the playstation board. Installation is not easy, and can result in a permanently fried console. Correct installation allows the gamer to play his burned games.
+
+Playstation 2s use a similar method of copy protection. Mod chip development is underway but is advancing slowly. A beta-version chip called the Neo 2 functions for some games, but requires 30 wires to connect, and still requires the use of a game cheat device described above. However, a new form of the swaptrick functions for the Playstation 2. This method, discovered by Zima, simply uses a manual override of the PS2 tray motor to prevent the system from reading the first sectors of a burned game.
+ 
+ 
+
+--------------------------------------------------------------------------------
+
+(idea) by mmmmbeer (1.8 y) (print)     ?   I like it! Sat Jun 02 2001 at 7:06:17 
+
+
+There is still a method by which, without even modifying your console, one can use a copied psx game, and it will also let you use a foreign game (i.e. one made for a playstation in a different country). Of course, it is illegal to copy games, so I'm sure you won't use this with games you don't own, right? Right. So anyway, this works with all playstations that resemble the original, but may not work with the more recent redesigned PS1. I have no idea if it will work with the PS2.
+
+This is known as the "double swap" method. It is a combination of two earlier methods: the "white screen" and "black screen" methods, neither of which work on newer psx's. It requires several things: 
+The copied game that you wish to play. 
+A valid playstation game - any that you can play on your playstation should work. 
+Something to hold down the door button while the door is open - I recommend a carefully bent paperclip, propped under the edge of the door.
+This is rather difficult, mostly because the timing has to be almost exact. Try booting a game a few times with the door open, until you have a feel for the rhythm of the psx. Now, with the playstation off, place the valid game in the playstation with the door open, but the door button held down. Turn on the playstation. After the cd spins up, it will slow down briefly. Then it will speed up again. A moment later, it will speed up even more. This is when you need to swap in the copied game. The screen should change to a black screen with the Playstation logo. Congratulations, you've just completed the "white screen" method. If your psx is from a certain generation, this alone will allow you to play your game. Otherwise, read on.
+
+Leave your copied game in the console but pay close attention. The cd will slow down once more, then a little later it will slow again. This second slowdown will happen after the sound (music?) which accompanies the black screen has ended. This is the difficult part. You need to swap the valid cd back in, then almost immediately swap your copy back in. It takes perhaps half a second. The best way to tell when you need to put the copy back in is when the screen goes completely black. After this, if you've done everything right, the copied game's normal loading sequence will continue. If you want, you can now close the door, if necessary removing whatever you used to hold down the button. But make sure you don't let the button up, or your game will probably stop loading, and you'll have to start over.
+
+A few final comments:
+This works only with cd-r's, not with cd-rw's. The psx can't read them.
+The games you're playing aren't made for free. If you insist on copying games you don't own, please carefully consider whether you would buy the game if you couldn't copy it. If the answer is yes, go buy the game. It's worth more to you than the price you'll pay, and you'll be helping to encourage the creation of more good games, for yourself and the rest of us. Thanks. 

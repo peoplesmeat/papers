@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {subsection}{\numberline {1.1}History}{2}
+\contentsline {section}{\numberline {2}The Capcom Play System}{3}
+\contentsline {section}{\numberline {3}The Capcom Play System 2 (CPS-2)}{4}
+\contentsline {subsection}{\numberline {3.1}The Breaking of the CPS-2 system}{6}
+\contentsline {subsection}{\numberline {3.2}Cracking the CPS-2 System. }{6}
+\contentsline {subsection}{\numberline {3.3}Lessons from CPS-2}{8}
+\contentsline {section}{\numberline {4}The Microsoft Xbox}{8}
+\contentsline {subsection}{\numberline {4.1}The Xbox Hardware}{9}
+\contentsline {subsection}{\numberline {4.2}Xbox Live}{9}
+\contentsline {subsection}{\numberline {4.3}The Xbox Encryption system 1.0}{10}
+\contentsline {subsection}{\numberline {4.4}Microsoft Xbox Security 1.1}{12}
+\contentsline {subsection}{\numberline {4.5}Other Xbox Vulnerabilities}{13}
+\contentsline {subsection}{\numberline {4.6}Lessons from the Xbox security system}{13}
+\contentsline {section}{\numberline {5}The Xbox 360}{13}
+\contentsline {subsection}{\numberline {5.1}The Xbox 360 Security System}{14}
+\contentsline {subsection}{\numberline {5.2}The Xbox 360 E-Fuse}{15}
+\contentsline {subsection}{\numberline {5.3}Attacks on the Xbox 360}{16}
+\contentsline {subsection}{\numberline {5.4}Lessons from the Xbox 360 Security System}{19}
+\contentsline {section}{\numberline {6}Conclusion}{19}
